@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" style="--accent: #06b6d4; --accent-dim: #06b6d42e; --accent-glow: #06b6d473;"><head><script data-bard-client-injected="true">(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6IjExNjRiNzdiNDMzZDdhMDAyMWI4NjE4YjhjYTU3ZTMyZGI5MWUxMTMiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxNzc4NzAyNzkwNTc3ODAyNjM4MSIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzA3OTJjMmVhNTczYjIxYmRfaW5kZXguaHRtbC03ODkifSwiZXhwIjoxNzk0MzA3MTQ4LCJpYXQiOjE3OTQzMDM1NDgsImFsZyI6IlJTMjU2In0.NTayarLXoe99r-cqy6A78eWXcHdhTuUKVptRK-i-LRqxnsNRsYw0BWrEnpruA1qBxZj4cvqw3VHJaB0TO_pwBtPB6_upNYvqNmIMgjYx50YwKU3Z_5CLpRWx5L-zDLbEZupkkG_vhb4sylfaXctEFuyHsPue57YNApA9eaaxG47DyJdlksrRAIeDnxEz-peidSmmxlv06YZtyh430dsV9oS0jdAVDwY2LR-jLg6c1VffGicmmLnSx3IqI-HSnraPrhr2KWr0gBemsZ3yo0l5GEqkzjAHDZ0fHgp9ubHHHjVWAyZ2dhzWd9Y5G2l0CxPlPebYmO_hnLhtzjgmM6wPYA","c_0792c2ea573b21bd_index.html-789")</script><script data-bard-client-injected="true">
+  document.addEventListener('input', (event) => {
+    if (event.target && (event.target.isContentEditable || event.target.hasAttribute('contenteditable'))) {
+      const clonedDoc = document.cloneNode(true);
+      const injectedScripts = clonedDoc.querySelectorAll('[data-bard-client-injected="true"]');
+      injectedScripts.forEach(el => el.remove());
+      window.parent.postMessage({
+        type: 'inlineEdit',
+        html: '<!DOCTYPE html>\n' + clonedDoc.documentElement.outerHTML
+      }, '*');
+    }
+  });
+</script><script data-bard-client-injected="true">(function(){'use strict';window.addEventListener("message",a=>{a.data&&a.data.type==="SUPPLEMENTAL_DATA_UPDATE"&&window.dispatchEvent(new CustomEvent("supplementaldataupdate",{detail:a.data.data}))});}).call(this);
+</script><script data-bard-client-injected="true">(function(){'use strict';var k=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function m(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var q=m(this);
+function r(a,b){if(b)a:{var d=q;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&k(d,a,{configurable:!0,writable:!0,value:b})}}function t(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function u(a){return t(a())}
+r("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});r("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function v(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var aa=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let y=null;function z(a={}){return y?y:a.u?y=a.u:y=w(window.getComputedStyle(document.documentElement))}function A(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function B(a,b={}){var d;if(!(d=b.width)){d=A(a,"border-left-width");var c=A(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=A(a,"border-top-width"),c=A(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function C(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function ba(a){return u(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function ca(a,b,d){return u(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return ba(c)})}
+var D=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||D(a,b)};function da(a,b){return z(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function E(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=aa();try{b.className=`${b.className} ${f}`}catch(h){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=da(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function F(a){return a.search(/^(data:)/)!==-1}function G(a,b,d){return u(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var h=new FileReader;h.onerror=g;h.onloadend=()=>{try{f(d({v:c,result:h.result}))}catch(l){g(l)}};h.readAsDataURL(e)})})}const H={};function ea(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function I(a,b,d){return u(function*(){var c=ea(a,b,d.F);if(H[c]!=null)return H[c];d.B&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield G(a,d.l,({v:g,result:h})=>{b||(b=g.headers.get("Content-Type")||"");return h.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.o||""}return H[c]=e})};const J={R:"application/font-woff",S:"application/font-woff",O:"application/font-truetype",C:"application/vnd.ms-fontobject",J:"image/png",H:"image/jpeg",G:"image/jpeg",D:"image/gif",N:"image/tiff",M:"image/svg+xml",P:"image/webp"};function K(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function fa(a){return u(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):C(b)})}function ha(a,b){return u(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return C(d)}d=a.poster;d=yield I(d,J[K(d).toLowerCase()]||"",b);return C(d)})}
+function ia(a,b){return u(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield L(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ja(a,b){return u(function*(){return D(a,HTMLCanvasElement)?fa(a):D(a,HTMLVideoElement)?ha(a,b):D(a,HTMLIFrameElement)?ia(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function ka(a,b,d){return u(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(D(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||D(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>L(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function la(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):z(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);D(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function ma(a,b){D(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function na(a,b){return u(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield L(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function L(a,b,d){return u(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ja(c,b)).then(c=>ka(a,c,b)).then(c=>{D(c,Element)&&(la(a,c,b),E(a,c,":before",b),E(a,c,":after",b),D(a,HTMLTextAreaElement)&&(c.textContent=a.value),D(a,HTMLInputElement)&&c.setAttribute("value",a.value),ma(a,c));return c}).then(c=>na(c,b)):null})};const M=/url\((['"]?)([^'"]+?)\1\)/g,oa=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,pa=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function qa(a){var b=[];a.replace(M,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!F(d))}
+function ra(a,b,d,c){return u(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield I(e,J[K(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function sa(a,{K:b}){return b?a.replace(pa,d=>{for(;;){let [c,,e]=oa.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function N(a,b,d){return u(function*(){if(a.search(M)===-1)return a;var c=sa(a,d);return qa(c).reduce((e,f)=>e.then(g=>ra(g,f,b,d)),Promise.resolve(c))})};function O(a,b,d){return u(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield N(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function ta(a,b){return u(function*(){(yield O("background",a,b))||(yield O("background-image",a,b));(yield O("mask",a,b))||(yield O("-webkit-mask",a,b))||(yield O("mask-image",a,b))||(yield O("-webkit-mask-image",a,b))})}
+function ua(a,b){return u(function*(){var d=D(a,HTMLImageElement);if(d&&!F(a.src)||D(a,SVGImageElement)&&!F(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield I(c,J[K(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.h?(...h)=>{try{f(b.h(...h))}catch(l){g(l)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function va(a,b){return u(function*(){var d=w(a.childNodes).map(c=>P(c,b));yield Promise.all(d).then(()=>a)})}function P(a,b){return u(function*(){D(a,Element)&&(yield ta(a,b),yield ua(a,b),yield va(a,b))})};const Q={};function R(a){return u(function*(){var b=Q[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return Q[a]=b})}function S(a,b){return u(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>u(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return G(g,b.l,({result:h})=>{d=d.replace(f,`url(${h})`);return[f,h]})}));return Promise.all(e).then(()=>d)})}
+function T(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function wa(a,b){return u(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let h=g+1;f=R(f.href).then(l=>S(l,b)).then(l=>T(l).forEach(p=>{try{e.insertRule(p,p.startsWith("@import")?h+=1:e.cssRules.length)}catch(x){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(h=>h.href==null)||document.styleSheets[0];e.href!=null&&c.push(R(e.href).then(h=>S(h,b)).then(h=>T(h).forEach(l=>{g.insertRule(l,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function xa(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(M)!==-1)}function ya(a,b){return u(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=yield wa(w(a.ownerDocument.styleSheets),b);return xa(d)})}
+function za(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function Aa(a,b){return u(function*(){var d=yield ya(a,b),c=za(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>N(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function Ba(a,b){return u(function*(){var d=b.m!=null?b.m:b.A?null:yield Aa(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function Ca(a,b={}){return u(function*(){var {width:d,height:c}=B(a,b),e=yield L(a,b,!0);yield Ba(e,b);yield P(e,b);v(e,b);return yield ca(e,d,c)})}
+function Da(a,b={}){return u(function*(){var {width:d,height:c}=B(a,b),e=yield Ca(a,b);e=yield C(e);var f=document.createElement("canvas"),g=f.getContext("2d"),h=b.I||window.devicePixelRatio||1,l=b.j||d,p=b.i||c;f.width=l*h;f.height=p*h;!b.L&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${l}`;f.style.height=`${p}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function Ea(a,b={}){return u(function*(){return(yield Da(a,b)).toDataURL()})};const Fa=["gemini.google.com","corp.google.com","proxy.googlers.com"];function V(a){a=Number(a.replace(/px$/,""));return Number.isFinite(a)?a:0}function W(){return document.body.querySelectorAll('[class*="animate"]').length>0}function X(a,b){var d=document.createElement("canvas");d.width=a;d.height=b;return d.toDataURL("image/png")}const Y=X(1,1);
+function Z(a,b){return u(function*(){var d=Math.max(b?b.width:a.offsetWidth,1),c=Math.max(b?b.height:a.offsetHeight,1),e=HTMLCanvasElement.prototype.toDataURL;b&&(HTMLCanvasElement.prototype.toDataURL=function(f,g){var h;if(h=this.isConnected&&a.contains(this)){{let n=this.getBoundingClientRect();if(n.width===0||n.height===0)h=!1;else if(window.getComputedStyle(this).position==="fixed")h=n.bottom>0&&n.top<b.height&&n.right>0&&n.left<b.width;else{h=a.getBoundingClientRect();var l=n.top-h.top,p=n.left-
+h.left,x=n.right-h.left;h=n.bottom-h.top>b.scrollTop&&l<b.scrollTop+b.height&&x>b.scrollLeft&&p<b.scrollLeft+b.width}}h=!h}return h?"data:,":e.call(this,f,g)});try{let f=window.getComputedStyle(a),g=b?`${V(f.marginTop)-b.scrollTop}px`:void 0,h=b?`${V(f.marginLeft)-b.scrollLeft}px`:void 0,l=`${Math.max(a.offsetWidth,d)}px`,p,x=`${Math.max(a.offsetHeight,c+((p=b==null?void 0:b.scrollTop)!=null?p:0))}px`;return yield Ea(a,Object.assign({},{width:d,height:c,j:d,i:c},b?{style:{width:l,height:x,marginTop:g,
+marginLeft:h,marginBlockStart:g,marginInlineStart:h}}:{},{A:!0,filter:n=>{if(n.tagName==="IMG"){let U=n.getAttribute("src");if(!U||U.trim()===""||n.style.display==="none")return!1}return!0},o:Y,h:()=>Y}))}catch(f){return X(d,c)}finally{HTMLCanvasElement.prototype.toDataURL=e}})}
+function Ga(){return u(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ha(a){return u(function*(){var b={width:window.innerWidth||document.documentElement.clientWidth||document.body.offsetWidth,height:window.innerHeight||document.documentElement.clientHeight||document.body.offsetHeight,scrollTop:window.scrollY||document.documentElement.scrollTop||document.body.scrollTop||0,scrollLeft:window.scrollX||document.documentElement.scrollLeft||document.body.scrollLeft||0},d=document.body;if(W()){let c=yield Ga();d=c;document.body.appendChild(c)}b=yield Z(d,b);W()&&
+document.body.removeChild(d);window.parent.postMessage({type:"SEND_SCREENSHOT",image:b,topOffset:0},a.origin)})}function Ia(a){return u(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}window.addEventListener("message",a=>u(function*(){if(Fa.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ha(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ia(a)))}}));
+})();</script><script data-bard-client-injected="true">(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script data-bard-client-injected="true">
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}" data-bard-client-injected="true">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.j=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.h=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.i="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script data-bard-client-injected="true">((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedImageTransformModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image","imageTransformModelName":"gemini-3-pro-image","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image","gemini-3.1-flash-image-preview"],"deprecatedImageTransformModelNames":["gemini-3-pro-image-preview-11-2025"]})</script><script data-bard-client-injected="true">(function() {
+  function normalizeSlug(str) {
+    try {
+      return str
+        .trim()
+        .toLowerCase()
+        .replace(/[^p{L}p{N}s_-]/gu, '')
+        .replace(/s+/g, '-');
+    } catch (e) {
+      return str
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9s_-]/g, '')
+        .replace(/s+/g, '-');
+    }
+  }
+
+  function findTargetElement(hash) {
+    if (!hash || hash === '#') {
+      return null;
+    }
+    const rawId = hash.startsWith('#') ? hash.slice(1) : hash;
+    let decodedId = rawId;
+    try {
+      decodedId = decodeURIComponent(rawId);
+    } catch (e) {
+      // Ignore URI malformed errors.
+    }
+
+    // 1. Direct ID match (raw and decoded).
+    let target = document.getElementById(rawId) || document.getElementById(decodedId);
+    if (target) {
+      return target;
+    }
+
+    // 2. Name attribute match (<a name="...">).
+    try {
+      if (typeof CSS !== 'undefined' && CSS.escape) {
+        target =
+          document.querySelector('[name="' + CSS.escape(rawId) + '"]') ||
+          document.querySelector('[name="' + CSS.escape(decodedId) + '"]');
+      } else {
+        const namedElements = document.getElementsByName(rawId);
+        if (namedElements && namedElements.length > 0) {
+          return namedElements[0];
+        }
+      }
+    } catch (e) {
+      // Ignore querySelector syntax errors.
+    }
+    if (target) {
+      return target;
+    }
+
+    // 3. Match heading text by slug (for Markdown TOCs where headings lack explicit IDs).
+    const targetSlug = normalizeSlug(decodedId);
+    if (targetSlug) {
+      for (const heading of document.querySelectorAll('h1, h2, h3, h4, h5, h6')) {
+        if (normalizeSlug(heading.textContent || '') === targetSlug) {
+          return heading;
+        }
+      }
+    }
+
+    return null;
+  }
+
+  document.addEventListener('click', function(event) {
+    const target = event.target;
+    const anchor = target && typeof target.closest === 'function' ? target.closest('a') : null;
+    if (!anchor) {
+      return;
+    }
+
+    const href = anchor.getAttribute('href');
+    if (
+      !href ||
+      href.trim().toLowerCase().startsWith('javascript:') ||
+      anchor.hasAttribute('download')
+    ) {
+      return;
+    }
+
+    // Check if the link is an in-page hash / anchor link.
+    if (href.startsWith('#')) {
+      event.preventDefault();
+      const targetElement = findTargetElement(href);
+      if (targetElement) {
+        targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+      }
+      return;
+    }
+
+    // Check if the URL has the same origin/pathname but with a hash.
+    try {
+      const url = new URL(anchor.href, window.location.href);
+      if (
+        url.hash &&
+        url.origin === window.location.origin &&
+        url.pathname === window.location.pathname
+      ) {
+        event.preventDefault();
+        const targetElement = findTargetElement(url.hash);
+        if (targetElement) {
+          targetElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+        }
+        return;
+      }
+    } catch (e) {
+      // Fall through if URL parsing fails.
+    }
+
+    // For all external or full navigation links, prevent iframe-level navigation
+    // (which breaks in AGSA WebView or sandboxed iframes) and ensure they open
+    // safely in a new tab/window.
+    if (anchor.target !== '_blank') {
+      event.preventDefault();
+      window.open(anchor.href, '_blank', 'noopener,noreferrer');
+    }
+  }, {capture: true});
+})();</script><script data-bard-client-injected="true">(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script data-bard-client-injected="true">(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Agent Self-Assembling Portfolio &amp; HTML Generator</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&amp;family=Space+Grotesk:wght@500;700;800&amp;display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Space Grotesk', 'Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        serif: ['Instrument Serif', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --accent: #ef4444;
+            --accent-dim: rgba(239, 68, 68, 0.18);
+            --accent-glow: rgba(239, 68, 68, 0.45);
+            --bg-primary: #050507;
+            --bg-card: #0b0b10;
+        }
+
+        * {
+            box-sizing: border-box;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent) #0b0b10;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: #f4f4f6;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            margin: 0;
+            selection-background-color: var(--accent);
+        }
+
+        /* Subtle technical background grid */
+        .tech-grid-bg {
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+            background-size: 48px 48px;
+        }
+
+        /* Giant Hollow Outlined PORTFOLIO Text */
+        .hero-outline-text {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 800;
+            color: transparent;
+            -webkit-text-stroke: 2px var(--accent);
+            letter-spacing: 0.04em;
+            line-height: 0.88;
+            user-select: none;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            filter: drop-shadow(0 0 28px rgba(239, 68, 68, 0.14));
+        }
+
+        .hero-outline-text.wireframe-mode {
+            -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.18);
+            filter: none;
+        }
+
+        /* Assembly Target States */
+        .asm-target {
+            position: relative;
+            opacity: 0;
+            transform: translateY(6px) scale(0.985);
+            transition: opacity 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+                        filter 0.42s ease;
+            will-change: opacity, transform;
+        }
+
+        .asm-target.asm-skeleton {
+            opacity: 0.28;
+            filter: grayscale(1) contrast(0.7);
+            transform: translateY(2px) scale(0.995);
+        }
+
+        .asm-target.asm-complete {
+            opacity: 1;
+            filter: none;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Portrait special two-phase reveal (Grayscale Wireframe -> Crimson Wipe) */
+        .portrait-crimson-bg {
+            background-color: var(--accent);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+            transition: clip-path 0.75s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.3s ease;
+        }
+
+        .portrait-crimson-bg.revealed {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        /* Dynamic CAD Wireframe Box drawn by cursors */
+        .cad-wireframe-box {
+            position: fixed;
+            pointer-events: none;
+            z-index: 60;
+            border: 1.5px solid var(--box-color, #3b82f6);
+            background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(0,0,0,0) 100%);
+            box-shadow: 0 0 20px var(--box-glow, rgba(59, 130, 246, 0.2));
+            transition: opacity 0.25s ease;
+        }
+
+        .cad-corner {
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            background: #ffffff;
+            border: 1.5px solid var(--box-color, #3b82f6);
+        }
+        .cad-corner.tl { top: -4px; left: -4px; }
+        .cad-corner.tr { top: -4px; right: -4px; }
+        .cad-corner.bl { bottom: -4px; left: -4px; }
+        .cad-corner.br { bottom: -4px; right: -4px; }
+
+        /* Sparkle burst animation */
+        @keyframes sparklePop {
+            0% { transform: translate(-50%, -50%) scale(0) rotate(0deg); opacity: 1; }
+            60% { transform: translate(-50%, -50%) scale(1.25) rotate(45deg); opacity: 0.95; }
+            100% { transform: translate(-50%, -50%) scale(0.2) rotate(90deg); opacity: 0; }
+        }
+        .sparkle-star {
+            position: fixed;
+            pointer-events: none;
+            z-index: 75;
+            animation: sparklePop 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Scanline overlay inside portrait */
+        .scanlines {
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent 0px,
+                transparent 2px,
+                rgba(0, 0, 0, 0.18) 3px,
+                rgba(0, 0, 0, 0.18) 4px
+            );
+        }
+
+        /* Custom Accent Utilities */
+        .accent-bg { background-color: var(--accent); }
+        .accent-text { color: var(--accent); }
+        .accent-border { border-color: var(--accent); }
+        .accent-glow-btn {
+            border: 1px solid var(--accent);
+            box-shadow: 0 0 18px var(--accent-dim), inset 0 0 12px var(--accent-dim);
+        }
+        .accent-glow-btn:hover {
+            background-color: var(--accent);
+            color: #ffffff;
+            box-shadow: 0 0 28px var(--accent-glow);
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, system-ui, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono, monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.bottom-5{bottom:1.25rem}.left-1\/2{left:50%}.left-3{left:0.75rem}.right-0{right:0px}.right-1{right:0.25rem}.right-3{right:0.75rem}.right-4{right:1rem}.top-0{top:0px}.top-1{top:0.25rem}.top-2\.5{top:0.625rem}.top-3{top:0.75rem}.left-0{left:0px}.-top-4{top:-1rem}.z-10{z-index:10}.z-20{z-index:20}.z-50{z-index:50}.z-\[100\]{z-index:100}.z-\[70\]{z-index:70}.z-\[80\]{z-index:80}.z-\[90\]{z-index:90}.z-\[95\]{z-index:95}.mx-auto{margin-left:auto;margin-right:auto}.-mt-2{margin-top:-0.5rem}.mb-1{margin-bottom:0.25rem}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:0.5rem}.mb-8{margin-bottom:2rem}.ml-auto{margin-left:auto}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-20{margin-top:5rem}.mt-3{margin-top:0.75rem}.ml-1{margin-left:0.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-\[4\/4\.7\]{aspect-ratio:4/4.7}.h-1\.5{height:0.375rem}.h-12{height:3rem}.h-2{height:0.5rem}.h-2\.5{height:0.625rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-7{height:1.75rem}.h-\[1px\]{height:1px}.h-\[92\%\]{height:92%}.h-full{height:100%}.max-h-\[88vh\]{max-height:88vh}.min-h-\[320px\]{min-height:320px}.min-h-screen{min-height:100vh}.w-1\.5{width:0.375rem}.w-12{width:3rem}.w-16{width:4rem}.w-2{width:0.5rem}.w-2\.5{width:0.625rem}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-7{width:1.75rem}.w-\[1px\]{width:1px}.w-\[92\%\]{width:92%}.w-full{width:100%}.min-w-\[135px\]{min-width:135px}.max-w-3xl{max-width:48rem}.max-w-\[1380px\]{max-width:1380px}.max-w-\[340px\]{max-width:340px}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-x-full{--tw-translate-x:100%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes ping{75%, 100%{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.resize-none{resize:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.-space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(-0.25rem * var(--tw-space-x-reverse));margin-left:calc(-0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-3\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.875rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.875rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-sm{border-radius:0.125rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-t{border-top-width:1px}.border-zinc-700{--tw-border-opacity:1;border-color:rgb(63 63 70 / var(--tw-border-opacity, 1))}.border-zinc-700\/80{border-color:rgb(63 63 70 / 0.8)}.border-zinc-800{--tw-border-opacity:1;border-color:rgb(39 39 42 / var(--tw-border-opacity, 1))}.border-zinc-800\/80{border-color:rgb(39 39 42 / 0.8)}.border-zinc-800\/90{border-color:rgb(39 39 42 / 0.9)}.border-zinc-900{--tw-border-opacity:1;border-color:rgb(24 24 27 / var(--tw-border-opacity, 1))}.border-zinc-900\/80{border-color:rgb(24 24 27 / 0.8)}.border-zinc-900\/90{border-color:rgb(24 24 27 / 0.9)}.bg-\[\#06b6d4\]{--tw-bg-opacity:1;background-color:rgb(6 182 212 / var(--tw-bg-opacity, 1))}.bg-\[\#10b981\]{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-\[\#8b5cf6\]{--tw-bg-opacity:1;background-color:rgb(139 92 246 / var(--tw-bg-opacity, 1))}.bg-\[\#ef4444\]{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-\[\#f59e0b\]{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-black\/60{background-color:rgb(0 0 0 / 0.6)}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-purple-500{--tw-bg-opacity:1;background-color:rgb(168 85 247 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-white\/60{background-color:rgb(255 255 255 / 0.6)}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-zinc-700{--tw-bg-opacity:1;background-color:rgb(63 63 70 / var(--tw-bg-opacity, 1))}.bg-zinc-800{--tw-bg-opacity:1;background-color:rgb(39 39 42 / var(--tw-bg-opacity, 1))}.bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity, 1))}.bg-zinc-900\/40{background-color:rgb(24 24 27 / 0.4)}.bg-zinc-900\/50{background-color:rgb(24 24 27 / 0.5)}.bg-zinc-900\/60{background-color:rgb(24 24 27 / 0.6)}.bg-zinc-900\/70{background-color:rgb(24 24 27 / 0.7)}.bg-zinc-900\/80{background-color:rgb(24 24 27 / 0.8)}.bg-zinc-900\/90{background-color:rgb(24 24 27 / 0.9)}.bg-zinc-900\/95{background-color:rgb(24 24 27 / 0.95)}.bg-zinc-950{--tw-bg-opacity:1;background-color:rgb(9 9 11 / var(--tw-bg-opacity, 1))}.bg-zinc-950\/50{background-color:rgb(9 9 11 / 0.5)}.bg-zinc-950\/80{background-color:rgb(9 9 11 / 0.8)}.bg-zinc-950\/90{background-color:rgb(9 9 11 / 0.9)}.bg-zinc-950\/95{background-color:rgb(9 9 11 / 0.95)}.object-cover{object-fit:cover}.object-top{object-position:top}.p-1\.5{padding:0.375rem}.p-2{padding:0.5rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.pb-1{padding-bottom:0.25rem}.pb-32{padding-bottom:8rem}.pl-0\.5{padding-left:0.125rem}.pt-1{padding-top:0.25rem}.pt-10{padding-top:2.5rem}.pt-2{padding-top:0.5rem}.pt-2\.5{padding-top:0.625rem}.pt-3{padding-top:0.75rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.text-center{text-align:center}.font-display{font-family:Space Grotesk, Inter, sans-serif}.font-mono{font-family:JetBrains Mono, monospace}.font-serif{font-family:Instrument Serif, Georgia, serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[15\.2vw\]{font-size:15.2vw}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[9px\]{font-size:9px}.text-\[8px\]{font-size:8px}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-white\/80{color:rgb(255 255 255 / 0.8)}.text-zinc-100{--tw-text-opacity:1;color:rgb(244 244 245 / var(--tw-text-opacity, 1))}.text-zinc-200{--tw-text-opacity:1;color:rgb(228 228 231 / var(--tw-text-opacity, 1))}.text-zinc-300{--tw-text-opacity:1;color:rgb(212 212 216 / var(--tw-text-opacity, 1))}.text-zinc-400{--tw-text-opacity:1;color:rgb(161 161 170 / var(--tw-text-opacity, 1))}.text-zinc-500{--tw-text-opacity:1;color:rgb(113 113 122 / var(--tw-text-opacity, 1))}.text-zinc-600{--tw-text-opacity:1;color:rgb(82 82 91 / var(--tw-text-opacity, 1))}.opacity-0{opacity:0}.opacity-30{opacity:0.3}.mix-blend-multiply{mix-blend-mode:multiply}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_10px_40px_rgba\(0\2c 0\2c 0\2c 0\.85\)\]{--tw-shadow:0 10px 40px rgba(0,0,0,0.85);--tw-shadow-colored:0 10px 40px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-zinc-950{--tw-ring-opacity:1;--tw-ring-color:rgb(9 9 11 / var(--tw-ring-opacity, 1))}.contrast-125{--tw-contrast:contrast(1.25);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0_12px_24px_rgba\(0\2c 0\2c 0\2c 0\.65\)\]{--tw-drop-shadow:drop-shadow(0 12px 24px rgba(0,0,0,0.65));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0_2px_8px_rgba\(0\2c 0\2c 0\2c 0\.9\)\]{--tw-drop-shadow:drop-shadow(0 2px 8px rgba(0,0,0,0.9));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.duration-700{transition-duration:700ms}.ease-out{transition-timing-function:cubic-bezier(0, 0, 0.2, 1)}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:border-red-500\/50:hover{border-color:rgb(239 68 68 / 0.5)}.hover\:border-red-500\/60:hover{border-color:rgb(239 68 68 / 0.6)}.hover\:border-white:hover{--tw-border-opacity:1;border-color:rgb(255 255 255 / var(--tw-border-opacity, 1))}.hover\:border-zinc-600:hover{--tw-border-opacity:1;border-color:rgb(82 82 91 / var(--tw-border-opacity, 1))}.hover\:bg-zinc-700:hover{--tw-bg-opacity:1;background-color:rgb(63 63 70 / var(--tw-bg-opacity, 1))}.hover\:bg-zinc-800:hover{--tw-bg-opacity:1;background-color:rgb(39 39 42 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:opacity-90:hover{opacity:0.9}.hover\:opacity-95:hover{opacity:0.95}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-0:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.group:hover .group-hover\:scale-\[1\.02\]{--tw-scale-x:1.02;--tw-scale-y:1.02;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-zinc-400{--tw-text-opacity:1;color:rgb(161 161 170 / var(--tw-text-opacity, 1))}@media (min-width: 640px){.sm\:-mt-6{margin-top:-1.5rem}.sm\:block{display:block}.sm\:inline{display:inline}.sm\:w-24{width:6rem}.sm\:gap-8{gap:2rem}.sm\:px-8{padding-left:2rem;padding-right:2rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-\[15px\]{font-size:15px}}@media (min-width: 768px){.md\:inline{display:inline}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-3{grid-column:span 3 / span 3}.lg\:col-span-4{grid-column:span 4 / span 4}.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:-mt-10{margin-top:-2.5rem}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:gap-8{gap:2rem}}@media (min-width: 1280px){.xl\:text-\[212px\]{font-size:212px}}</style></head>
+<body class="tech-grid-bg min-h-screen relative selection:bg-red-500 selection:text-white">
+
+    <!-- ===================================================================== -->
+    <!-- PHASE 0: CENTER SWARM ORBIT HUB OVERLAY (0.0s - 1.2s in Video)        -->
+    <!-- ===================================================================== -->
+    <div id="swarm-center-hub" class="fixed inset-0 pointer-events-none z-50 flex items-center justify-center transition-opacity duration-500" style="opacity: 0;">
+        <div id="hub-badge" class="w-12 h-12 rounded-xl bg-zinc-900/95 border border-zinc-700/80 flex items-center justify-center shadow-2xl transition-all duration-500 scale-100" style="transform: scale(0.1);">
+            <span class="font-mono text-xs font-bold text-zinc-300 tracking-tighter">&lt;/&gt;</span>
+        </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- DYNAMIC MULTI-AGENT CURSORS & CAD WIREFRAME LAYER                     -->
+    <!-- ===================================================================== -->
+    <div id="cad-boxes-layer" class="fixed inset-0 pointer-events-none z-50 overflow-hidden"></div>
+    <div id="cursors-layer" class="fixed inset-0 pointer-events-none z-[70] overflow-hidden"></div>
+
+    <!-- ===================================================================== -->
+    <!-- TOP FLOATING BUILDER TOOLBAR (Uyghur + English Quick Controls)        -->
+    <!-- ===================================================================== -->
+    
+
+    <!-- ===================================================================== -->
+    <!-- MAIN SELF-ASSEMBLING PORTFOLIO CANVAS                                 -->
+    <!-- ===================================================================== -->
+    <main id="portfolio-stage" class="max-w-[1380px] mx-auto px-4 sm:px-8 pt-4 pb-32 relative z-10">
+
+        <!-- 1. TOP NAVIGATION BAR -->
+        <header id="target-nav" data-agent-label="NAV-SYNTH" class="asm-target flex items-center justify-between py-3 px-4 rounded-lg border border-zinc-900/80 bg-zinc-950/50 backdrop-blur-sm mb-2">
+            <div class="flex items-center gap-3">
+                <div id="view-logo-box" class="w-7 h-7 rounded accent-bg flex items-center justify-center font-display font-black text-white text-sm tracking-tighter shadow-md">م</div>
+                <span class="font-mono text-[11px] text-zinc-400 tracking-widest uppercase hidden sm:inline" id="view-nav-tag">// SYS.NODE_01</span>
+            </div>
+
+            <nav class="flex items-center gap-5 sm:gap-8 text-xs font-mono text-zinc-400">
+                <a href="#hero-section" class="text-white hover:accent-text transition-colors flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full accent-bg"></span>About
+                </a>
+                <a href="#philosophy-section" class="hover:text-white transition-colors">Philosophy</a>
+                <a href="#philosophy-section" class="hover:text-white transition-colors hidden sm:inline">Architecture</a>
+                <a href="#philosophy-section" class="hover:text-white transition-colors hidden md:inline">Execution</a>
+                <a href="#philosophy-section" class="hover:text-white transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-2 font-mono text-[11px] text-zinc-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                <span class="text-zinc-300 hidden md:inline">SWARM: ONLINE</span>
+            </div>
+        </header>
+
+        <!-- 2. GIANT OUTLINED HERO TITLE ("PORTFOLIO") -->
+        <section id="hero-section" class="relative mt-1">
+            <div id="target-hero-title" data-agent-label="TYPE-ENGINE" class="asm-target w-full overflow-hidden py-1">
+                <h1 id="view-hero-outline" class="hero-outline-text text-center text-[15.2vw] xl:text-[212px] tracking-tight leading-none select-none">تور بەت ياساش</h1>
+            </div>
+
+            <!-- 3. THREE-COLUMN HERO GRID (Matches 00:02 - 00:06 in Video) -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start -mt-2 sm:-mt-6 lg:-mt-10 relative z-20">
+
+                <!-- LEFT COLUMN: Greeting, Crimson Name Block, Bio, Buttons, Metrics (5 cols) -->
+                <div class="lg:col-span-5 flex flex-col space-y-5 pt-2">
+                    
+                    <!-- Greeting + Red Name Block -->
+                    <div id="target-name-card" data-agent-label="IDENTITY-OP" class="asm-target inline-flex flex-col items-start">
+                        <span id="view-greeting" class="font-serif italic text-2xl sm:text-3xl text-zinc-200 mb-1 pl-0.5">سالام كۆپچىلىك</span>
+                        <div class="accent-bg px-5 py-2.5 shadow-xl relative group">
+                            <h2 id="view-name" class="font-display font-black text-4xl sm:text-5xl text-white tracking-tight uppercase leading-none">مەن راشىدىن</h2>
+                            <!-- Subtle technical corner ticks -->
+                            <span class="absolute top-1 right-1 w-1.5 h-1.5 bg-white/60"></span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-3 font-mono text-[11px] tracking-widest uppercase accent-text font-semibold">
+                            <span>•</span>
+                            <span id="view-role">بۇ بىر تور بەت ياساش قۇرالى</span>
+                        </div>
+                    </div>
+
+                    <!-- Bio Description & Action Buttons -->
+                    <div id="target-bio-box" data-agent-label="COPY-NODE" class="asm-target space-y-5">
+                        <p id="view-bio" class="text-zinc-300 text-sm sm:text-[15px] leading-relaxed font-normal max-w-lg">مەن يۇقىرى تىخنىكىلاردىن پايدىلىنىپ بۇ تور بەتنى ياساپ چىقتىم، سىلەرمۇ كۆرۈپ بىقىڭلار</p>
+
+                        <!-- Action Buttons -->
+                        <div class="flex flex-wrap items-center gap-3 pt-1">
+                            <a href="#philosophy-section" id="view-btn-primary" class="accent-glow-btn px-4 py-2.5 rounded text-xs font-mono uppercase tracking-wider text-white transition-all flex items-center gap-2"><span>دەرھال ئاتلىنىش</span><span>→</span></a>
+                            <button onclick="toggleBuilderDrawer(true)" id="view-btn-secondary" class="px-4 py-2.5 rounded border border-zinc-800 hover:border-zinc-600 bg-zinc-950/80 text-xs font-mono uppercase tracking-wider text-zinc-300 hover:text-white transition-all">كۆرۈپ بىقىڭ</button>
+                        </div>
+                    </div>
+
+                    <!-- Bottom 3 Metrics Row (470K+, 7-Layer, 100%) -->
+                    <div id="target-stats-row" data-agent-label="TELEMETRY-UI" class="asm-target pt-4 border-t border-zinc-900 grid grid-cols-3 gap-4 max-w-md">
+                        <div>
+                            <div class="flex items-baseline gap-1">
+                                <span id="view-stat1-val" class="font-display font-extrabold text-xl sm:text-2xl accent-text">470K+</span>
+                                <span class="font-mono text-[10px] text-zinc-500">LOC</span>
+                            </div>
+                            <p id="view-stat1-lbl" class="font-mono text-[11px] text-zinc-400 mt-0.5">Lines of Code</p>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline gap-1">
+                                <span id="view-stat2-val" class="font-display font-extrabold text-xl sm:text-2xl text-white">7-Layer</span>
+                                <span class="font-mono text-[10px] text-zinc-500">Arch</span>
+                            </div>
+                            <p id="view-stat2-lbl" class="font-mono text-[11px] text-zinc-400 mt-0.5">Memory Stack</p>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline gap-1">
+                                <span id="view-stat3-val" class="font-display font-extrabold text-xl sm:text-2xl text-white">100%</span>
+                                <span class="font-mono text-[10px] text-zinc-500"> Raw</span>
+                            </div>
+                            <p id="view-stat3-lbl" class="font-mono text-[11px] text-zinc-400 mt-0.5">First Principles</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CENTER COLUMN: Crimson Silhouette Portrait Card (4 cols) -->
+                <div class="lg:col-span-4 flex flex-col items-center">
+                    <div id="target-portrait" data-agent-label="SHADER-CORE" class="asm-target w-full max-w-[340px] aspect-[4/4.7] relative rounded-sm overflow-hidden border border-zinc-800/90 bg-zinc-900/70 shadow-2xl group">
+                        
+                        <!-- Initial Wireframe Crosshair Layer -->
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-30">
+                            <div class="w-full h-[1px] bg-zinc-700"></div>
+                            <div class="h-full w-[1px] bg-zinc-700 absolute"></div>
+                        </div>
+
+                        <!-- Crimson Reveal Backdrop (Wipes in from left to right as in 00:04 -> 00:05) -->
+                        <div id="portrait-crimson-layer" class="portrait-crimson-bg absolute inset-0 scanlines revealed"></div>
+
+                        <!-- Stylized Noir Suit & Fedora Silhouette SVG / Custom Image -->
+                        <div class="relative z-10 w-full h-full flex items-end justify-center pt-6">
+                            <img id="view-custom-portrait" src="" alt="Custom Portrait" class="hidden w-full h-full object-cover object-top mix-blend-multiply contrast-125">
+                            
+                            <!-- Default Iconic Fedora & Suit Silhouette (Matches Video 00:04-00:08) -->
+                            <svg id="view-svg-portrait" viewBox="0 0 320 380" class="w-[92%] h-[92%] drop-shadow-[0_12px_24px_rgba(0,0,0,0.65)] transition-transform duration-700 group-hover:scale-[1.02]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Subtle rim shadow -->
+                                <ellipse cx="160" cy="118" rx="68" ry="16" fill="#09090c" opacity="0.25"></ellipse>
+                                <!-- Fedora Crown -->
+                                <path d="M112 96 C116 54, 140 44, 162 46 C184 44, 206 56, 210 96 Z" fill="#0c0c10"></path>
+                                <!-- Fedora Pinch & Band -->
+                                <path d="M111 91 Q160 100 211 91 L213 99 Q160 108 109 99 Z" fill="#18181f"></path>
+                                <!-- Fedora Wide Brim -->
+                                <path d="M68 102 C95 88, 225 88, 254 104 C230 118, 92 118, 68 102 Z" fill="#09090d"></path>
+                                <!-- Head / Jawline in shadow -->
+                                <path d="M126 104 L132 162 C136 184, 184 184, 188 162 L194 104 Z" fill="#101015"></path>
+                                <!-- Subtle Glasses Rim Reflection -->
+                                <rect x="136" y="122" width="19" height="8" rx="2" fill="#272732" opacity="0.7"></rect>
+                                <rect x="165" y="122" width="19" height="8" rx="2" fill="#272732" opacity="0.7"></rect>
+                                <line x1="155" y1="125" x2="165" y2="125" stroke="#272732" stroke-width="1.5"></line>
+                                <!-- Neck & Crisp White Shirt Collar + Dark Tie -->
+                                <path d="M138 174 L122 204 L160 275 L198 204 L182 174 Z" fill="#dcdce5"></path>
+                                <!-- Tie -->
+                                <path d="M153 192 L167 192 L171 268 L160 282 L149 268 Z" fill="#09090c"></path>
+                                <!-- Tailored Suit Shoulders & Lapels -->
+                                <path d="M26 380 L42 232 C46 206, 86 192, 124 184 L160 280 L196 184 C234 192, 274 206, 278 232 L294 380 Z" fill="#0c0c10"></path>
+                                <!-- Suit Lapel Highlights -->
+                                <path d="M120 186 L102 230 L156 286 L160 275 Z" fill="#16161d"></path>
+                                <path d="M200 186 L218 230 L164 286 L160 275 Z" fill="#16161d"></path>
+                                <!-- Pocket Square Accent -->
+                                <path d="M204 264 L218 256 L224 266 L202 268 Z" fill="#e4e4ec" opacity="0.85"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Technical Corner Overlays -->
+                        <div class="absolute top-2.5 left-3 z-20 font-mono text-[10px] text-white/80 tracking-widest uppercase">
+                            ID // 001-ALPHA
+                        </div>
+                        <div class="absolute top-2.5 right-3 z-20 w-2 h-2 rounded-full bg-white/80"></div>
+                    </div>
+
+                    <!-- Portrait Bottom Technical Caption -->
+                    <div id="target-portrait-caption" data-agent-label="META-TAG" class="asm-target w-full max-w-[340px] flex items-center justify-between pt-2.5 font-mono text-[11px] text-zinc-400">
+                        <span id="view-portrait-caption" class="tracking-widest uppercase">// SOVEREIGN SILICON AUTHOR</span>
+                        <span class="text-zinc-600">[24/7 OP]</span>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: Architecture Log Cards 01, 02, 03 (3 cols) -->
+                <div class="lg:col-span-3 flex flex-col space-y-3.5 pt-2">
+                    <div class="font-mono text-[11px] text-zinc-500 tracking-widest uppercase pb-1 border-b border-zinc-900 flex items-center justify-between">
+                        <span>// ARCHITECTURE LOG</span>
+                        <span class="accent-text">SYS.03</span>
+                    </div>
+
+                    <!-- Card 01 -->
+                    <div id="target-log-1" data-agent-label="NODE-01" class="asm-target p-4 rounded bg-zinc-950/90 border border-zinc-800/80 hover:border-red-500/50 transition-all group">
+                        <div class="flex items-center justify-between font-mono text-[11px] mb-1">
+                            <span class="accent-text font-bold">01</span>
+                            <span class="text-zinc-600 group-hover:text-zinc-400 transition-colors">CORE.SWARM</span>
+                        </div>
+                        <h3 id="view-log1-title" class="font-display font-bold text-base text-white mb-1">مائوسلارنىڭ رەڭگى</h3>
+                        <p id="view-log1-desc" class="text-xs text-zinc-400 leading-relaxed">Multi-Agent Swarm Coordination &amp; Cognitive Execution Pipelines.</p>
+                    </div>
+
+                    <!-- Card 02 -->
+                    <div id="target-log-2" data-agent-label="NODE-02" class="asm-target p-4 rounded bg-zinc-950/90 border border-zinc-800/80 hover:border-red-500/50 transition-all group">
+                        <div class="flex items-center justify-between font-mono text-[11px] mb-1">
+                            <span class="accent-text font-bold">02</span>
+                            <span class="text-zinc-600 group-hover:text-zinc-400 transition-colors">GRAPH.SYNTH</span>
+                        </div>
+                        <h3 id="view-log2-title" class="font-display font-bold text-base text-white mb-1">گىرافىكلار</h3>
+                        <p id="view-log2-desc" class="text-xs text-zinc-400 leading-relaxed">Dynamic Neural Routing &amp; Zero-Latency Context Synthesis.</p>
+                    </div>
+
+                    <!-- Card 03 -->
+                    <div id="target-log-3" data-agent-label="NODE-03" class="asm-target p-4 rounded bg-zinc-950/90 border border-zinc-800/80 hover:border-red-500/50 transition-all group">
+                        <div class="flex items-center justify-between font-mono text-[11px] mb-1">
+                            <span class="accent-text font-bold">03</span>
+                            <span class="text-zinc-600 group-hover:text-zinc-400 transition-colors">EXEC.LOOP</span>
+                        </div>
+                        <h3 id="view-log3-title" class="font-display font-bold text-base text-white mb-1">چىقىرىش كۆزنىكى</h3>
+                        <p id="view-log3-desc" class="text-xs text-zinc-400 leading-relaxed">Deterministic Rust/C++ Execution Engines &amp; Real-Time Telemetry.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- SECTION 2: SCROLL-TRIGGERED PHILOSOPHY SECTION (00:06 - 00:08)    -->
+        <!-- ================================================================= -->
+        <section id="philosophy-section" class="mt-20 pt-10 border-t border-zinc-900/90 relative">
+            
+            <!-- Technical Index Bar -->
+            <div id="target-sec2-index" data-agent-label="INDEX-OP" class="asm-target flex items-center justify-between font-mono text-xs text-zinc-500 mb-8">
+                <span>// 01.00 SEC_ABOUT INDEX [01/05]</span>
+                <span class="hidden sm:inline">LATENCY: 0.04ms // MEM_LOCK: TRUE</span>
+            </div>
+
+            <!-- Section Heading ("COGNITIVE PROFILE" / "Background & Philosophy") -->
+            <div id="target-sec2-title" data-agent-label="HEAD-BUILDER" class="asm-target mb-10">
+                <div class="font-mono text-xs uppercase tracking-widest accent-text font-semibold mb-2">
+                    COGNITIVE PROFILE
+                </div>
+                <h2 id="view-sec2-heading" class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight">يۇقىرى تەرەقىيات ۋە زامانىۋىي كۆرۈنمە يۈز</h2>
+            </div>
+
+            <!-- Philosophy Grid Cards (Assembled on scroll as seen at 00:08) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div id="target-phil-1" data-agent-label="PHIL-AGENT-1" class="asm-target p-6 rounded-lg bg-zinc-950/90 border border-zinc-800/90 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="font-mono text-xs accent-text mb-2">// 01. FIRST PRINCIPLES</div>
+                        <h3 id="view-phil1-title" class="font-display font-bold text-xl text-white mb-2">ئاپتۇماتلاش</h3>
+                        <p id="view-phil1-desc" class="text-sm text-zinc-400 leading-relaxed">
+                            Every abstraction layer introduces latency and cognitive drift. We build custom memory allocators, agent orchestrators, and neural routers directly from bare metal up.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-zinc-900 flex items-center justify-between font-mono text-[11px] text-zinc-500">
+                        <span>STATUS: VERIFIED</span>
+                        <span class="text-emerald-400">100% NATIVE</span>
+                    </div>
+                </div>
+
+                <div id="target-phil-2" data-agent-label="PHIL-AGENT-2" class="asm-target p-6 rounded-lg bg-zinc-950/90 border border-zinc-800/90 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="font-mono text-xs accent-text mb-2">// 02. SWARM COGNITION</div>
+                        <h3 id="view-phil2-title" class="font-display font-bold text-xl text-white mb-2">Agent نىڭ ئالاھىدە رولى</h3>
+                        <p id="view-phil2-desc" class="text-sm text-zinc-400 leading-relaxed">
+                            Instead of monolithic prompts, specialized micro-agents collaborate in parallel—planning, verifying, and self-healing codebases 24 hours a day.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-zinc-900 flex items-center justify-between font-mono text-[11px] text-zinc-500">
+                        <span>AGENTS: 16 ACTIVE</span>
+                        <span class="accent-text">AUTONOMOUS</span>
+                    </div>
+                </div>
+
+                <div id="target-phil-3" data-agent-label="PHIL-AGENT-3" class="asm-target p-6 rounded-lg bg-zinc-950/90 border border-zinc-800/90 flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="font-mono text-xs accent-text mb-2">// 03. DETERMINISTIC SPEED</div>
+                        <h3 id="view-phil3-title" class="font-display font-bold text-xl text-white mb-2">زامانىۋىي سۈنئىي ئەقىل</h3>
+                        <p id="view-phil3-desc" class="text-sm text-zinc-400 leading-relaxed">
+                            High-frequency telemetry and deterministic state machines ensure sub-millisecond decision loops across distributed cloud and local silicon clusters.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-zinc-900 flex items-center justify-between font-mono text-[11px] text-zinc-500">
+                        <span>THROUGHPUT: 1.2M/s</span>
+                        <span class="text-cyan-400">LOCKED</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================================================================== -->
+    <!-- BOTTOM FLOATING TELEMETRY PILL BAR (Exact Match to Video 00:00-00:08) -->
+    <!-- ===================================================================== -->
+    <div class="fixed bottom-5 left-1/2 -translate-x-1/2 z-[80] flex items-center gap-3 px-4 py-2.5 rounded-full bg-zinc-950/95 border border-zinc-800/90 shadow-[0_10px_40px_rgba(0,0,0,0.85)] backdrop-blur-md">
+        <!-- Multi-colored Agent Dots -->
+        <div class="flex items-center -space-x-1" id="pill-agent-dots">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-500 ring-2 ring-zinc-950"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-blue-500 ring-2 ring-zinc-950"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-zinc-950"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-500 ring-2 ring-zinc-950"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-purple-500 ring-2 ring-zinc-950"></span>
+        </div>
+
+        <!-- Status Text -->
+        <span id="pill-status-text" class="font-mono text-xs text-zinc-200 tracking-wide min-w-[135px]">Assembly complete ✦</span>
+
+        <!-- Progress bar -->
+        <div class="w-16 sm:w-24 h-1.5 bg-zinc-800 rounded-full overflow-hidden hidden sm:block">
+            <div id="pill-progress-bar" class="h-full accent-bg transition-all duration-200" style="width: 100%;"></div>
+        </div>
+
+        <div class="h-3.5 w-[1px] bg-zinc-800"></div>
+
+        <!-- Skip Button -->
+        <button id="btn-skip-asm" onclick="skipAssembly()" class="font-mono text-xs text-zinc-400 hover:text-white transition-colors px-1.5 hidden">
+            Skip
+        </button>
+
+        <!-- Replay Assembly Button -->
+        <button onclick="startSwarmAssembly()" title="قايتا قۇرۇش / Replay Assembly" class="p-1.5 rounded-full hover:bg-zinc-800 text-zinc-300 hover:text-white transition-colors">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+        </button>
+
+        <!-- Sound Synth Toggle -->
+        <button id="btn-sound-toggle" onclick="toggleSound()" title="ئاۋاز ئۈنۈمى / UI Sound FX" class="p-1.5 rounded-full hover:bg-zinc-800 text-zinc-400 hover:text-white transition-colors">
+            <svg id="icon-sound-off" class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path></svg>
+            <svg id="icon-sound-on" class="w-3.5 h-3.5 hidden text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+        </button>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- BUILDER STUDIO DRAWER (Customize Content, Swarm & Export HTML)        -->
+    <!-- ===================================================================== -->
+    
+
+    
+
+    <!-- ===================================================================== -->
+    <!-- STANDALONE HTML CODE GENERATOR & EXPORT MODAL                         -->
+    <!-- ===================================================================== -->
+    
+
+    <!-- ===================================================================== -->
+    <!-- MULTI-AGENT SWARM ENGINE & GENERATOR SCRIPT                           -->
+    <!-- ===================================================================== -->
+    <script>
+        // ---------------------------------------------------------------------
+        // 1. APPLICATION STATE & CUSTOMIZATION CONFIG
+        // ---------------------------------------------------------------------
+        const portfolioConfig = {
+    "accentColor": "#06b6d4",
+    "cursorCount": 6,
+    "speedMultiplier": 0.75,
+    "autoScrollToSec2": true,
+    "heroOutline": "تور بەت ياساش",
+    "greeting": "سالام كۆپچىلىك",
+    "name": "مەن راشىدىن",
+    "role": "بۇ بىر تور بەت ياساش قۇرالى",
+    "bio": "مەن يۇقىرى تىخنىكىلاردىن پايدىلىنىپ بۇ تور بەتنى ياساپ چىقتىم، سىلەرمۇ كۆرۈپ بىقىڭلار",
+    "btn1": "دەرھال ئاتلىنىش",
+    "btn2": "كۆرۈپ بىقىڭ",
+    "portraitUrl": "",
+    "portraitCaption": "// SOVEREIGN SILICON AUTHOR",
+    "stat1Val": "470K+",
+    "stat1Lbl": "Lines of Code",
+    "stat2Val": "7-Layer",
+    "stat2Lbl": "Memory Stack",
+    "stat3Val": "100%",
+    "stat3Lbl": "First Principles",
+    "log1Title": "مائوسلارنىڭ رەڭگى",
+    "log1Desc": "Multi-Agent Swarm Coordination & Cognitive Execution Pipelines.",
+    "log2Title": "گىرافىكلار",
+    "log2Desc": "Dynamic Neural Routing & Zero-Latency Context Synthesis.",
+    "log3Title": "چىقىرىش كۆزنىكى",
+    "log3Desc": "Deterministic Rust/C++ Execution Engines & Real-Time Telemetry.",
+    "sec2Heading": "يۇقىرى تەرەقىيات ۋە زامانىۋىي كۆرۈنمە يۈز",
+    "phil1Title": "ئاپتۇماتلاش",
+    "phil2Title": "Agent نىڭ ئالاھىدە رولى",
+    "phil3Title": "زامانىۋىي سۈنئىي ئەقىل"
+};
+
+        // Agent palette matching the video's colorful cursor swarm
+        const AGENT_PALETTE = [
+            { name: 'UI-ARCHITECT', color: '#ef4444' },
+            { name: 'SYS-KERNEL',   color: '#3b82f6' },
+            { name: 'TYPE-ENGINE',  color: '#10b981' },
+            { name: 'SHADER-OP',    color: '#f59e0b' },
+            { name: 'GRID-SYNTH',   color: '#a855f7' },
+            { name: 'DATA-NODE',    color: '#06b6d4' },
+            { name: 'MEM-GRAPH',    color: '#ec4899' },
+            { name: 'CORE-RENDER',  color: '#84cc16' },
+            { name: 'NET-DAEMON',   color: '#f97316' },
+            { name: 'RUST-EXEC',    color: '#14b8a6' },
+            { name: 'VEC-ROUTER',   color: '#6366f1' },
+            { name: 'SYNTH-09',     color: '#eab308' }
+        ];
+
+        // Assembly Runtime Variables
+        let animFrameId = null;
+        let activeTimeouts = [];
+        let agents = [];
+        let isAssembling = false;
+        let sec2Assembled = false;
+        let soundEnabled = false;
+        let audioCtx = null;
+
+        // ---------------------------------------------------------------------
+        // 2. WEB AUDIO SYNTHESIZER (Subtle Futuristic Telemetry Ticks)
+        // ---------------------------------------------------------------------
+        function playTick(freq = 620, duration = 0.035, type = 'sine') {
+            if (!soundEnabled) return;
+            try {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = type;
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
+            } catch (e) {}
+        }
+
+        function toggleSound() {
+            soundEnabled = !soundEnabled;
+            document.getElementById('icon-sound-off').classList.toggle('hidden', soundEnabled);
+            document.getElementById('icon-sound-on').classList.toggle('hidden', !soundEnabled);
+            if (soundEnabled) playTick(880, 0.06, 'triangle');
+        }
+
+        // ---------------------------------------------------------------------
+        // 3. SPARKLE STAR BURST GENERATOR (Matches 00:01 in Video)
+        // ---------------------------------------------------------------------
+        function spawnSparkle(x, y, color = '#ffffff') {
+            const el = document.createElement('div');
+            el.className = 'sparkle-star';
+            el.style.left = `${x}px`;
+            el.style.top = `${y}px`;
+            el.innerHTML = `
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="${color}">
+                    <path d="M12 0 L14.8 9.2 L24 12 L14.8 14.8 L12 24 L9.2 14.8 L0 12 L9.2 9.2 Z"/>
+                </svg>
+            `;
+            document.body.appendChild(el);
+            setTimeout(() => el.remove(), 680);
+        }
+
+        // ---------------------------------------------------------------------
+        // 4. AGENT CURSOR CREATION & RENDERING
+        // ---------------------------------------------------------------------
+        function createAgentCursors(count) {
+            const layer = document.getElementById('cursors-layer');
+            layer.innerHTML = '';
+            agents = [];
+
+            const cx = window.innerWidth / 2;
+            const cy = window.innerHeight / 2;
+
+            for (let i = 0; i < count; i++) {
+                const profile = AGENT_PALETTE[i % AGENT_PALETTE.length];
+                const angle = (i / count) * Math.PI * 2;
+                const radius = 58;
+
+                const cursorEl = document.createElement('div');
+                cursorEl.className = 'fixed top-0 left-0 pointer-events-none transition-opacity duration-300';
+                cursorEl.style.willChange = 'transform';
+                cursorEl.innerHTML = `
+                    <div class="relative flex items-start">
+                        <!-- Crisp Mouse Pointer SVG -->
+                        <svg width="18" height="22" viewBox="0 0 18 22" fill="none" class="drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+                            <path d="M1.5 1.5L16 10.5L9.2 12.2L6.5 19.5L1.5 1.5Z" fill="${profile.color}" stroke="#ffffff" stroke-width="1.4" stroke-linejoin="round"/>
+                        </svg>
+                        <!-- Agent Tag Pill -->
+                        <span style="background:${profile.color}" class="ml-1 mt-3 px-1.5 py-0.5 rounded text-[9px] font-mono font-bold text-white shadow-md whitespace-nowrap tracking-tight">
+                            ${profile.name}
+                        </span>
+                    </div>
+                `;
+                layer.appendChild(cursorEl);
+
+                agents.push({
+                    id: i,
+                    name: profile.name,
+                    color: profile.color,
+                    el: cursorEl,
+                    x: cx + Math.cos(angle) * radius,
+                    y: cy + Math.sin(angle) * radius,
+                    targetX: cx + Math.cos(angle) * radius,
+                    targetY: cy + Math.sin(angle) * radius,
+                    orbitAngle: angle,
+                    mode: 'orbit' // 'orbit' | 'fly'
+                });
+            }
+        }
+
+        // ---------------------------------------------------------------------
+        // 5. CAD WIREFRAME BOX MATERIALIZER (Figma/CAD Drag Effect)
+        // ---------------------------------------------------------------------
+        function animateWireframeBoxOnTarget(targetId, agent, delayMs, durationMs, onComplete) {
+            const t1 = setTimeout(() => {
+                const targetEl = document.getElementById(targetId);
+                if (!targetEl) return;
+
+                const rect = targetEl.getBoundingClientRect();
+                const cadLayer = document.getElementById('cad-boxes-layer');
+
+                // Create CAD bounding box
+                const box = document.createElement('div');
+                box.className = 'cad-wireframe-box';
+                box.style.setProperty('--box-color', agent.color);
+                box.style.left = `${rect.left}px`;
+                box.style.top = `${rect.top}px`;
+                box.style.width = `12px`;
+                box.style.height = `12px`;
+
+                box.innerHTML = `
+                    <div class="cad-corner tl"></div>
+                    <div class="cad-corner tr"></div>
+                    <div class="cad-corner bl"></div>
+                    <div class="cad-corner br"></div>
+                    <div style="background:${agent.color}" class="absolute -top-4 left-0 px-1 py-0.2 text-[8px] font-mono font-bold text-white uppercase whitespace-nowrap">
+                        ${targetEl.dataset.agentLabel || agent.name} · ${Math.round(rect.width)}×${Math.round(rect.height)}
+                    </div>
+                `;
+                cadLayer.appendChild(box);
+
+                // Send agent cursor to top-left first, then drag to bottom-right
+                agent.mode = 'fly';
+                agent.targetX = rect.left + 8;
+                agent.targetY = rect.top + 8;
+                spawnSparkle(rect.left + 8, rect.top + 8, '#ffffff');
+                playTick(520 + agent.id * 45, 0.03);
+
+                // Skeleton preview state
+                targetEl.classList.add('asm-skeleton');
+                if (targetId === 'target-hero-title') {
+                    document.getElementById('view-hero-outline').classList.add('wireframe-mode');
+                }
+
+                // Animate box expansion
+                const startTime = performance.now();
+                function stepBox(now) {
+                    const p = Math.min(1, (now - startTime) / durationMs);
+                    const ease = 1 - Math.pow(1 - p, 3); // cubic ease out
+
+                    const curW = Math.max(12, rect.width * ease);
+                    const curH = Math.max(12, rect.height * ease);
+
+                    box.style.width = `${curW}px`;
+                    box.style.height = `${curH}px`;
+
+                    // Move agent cursor along the dragging corner
+                    agent.targetX = rect.left + curW;
+                    agent.targetY = rect.top + curH;
+
+                    if (p < 1 && isAssembling) {
+                        requestAnimationFrame(stepBox);
+                    } else {
+                        // Lock component into final crisp state
+                        targetEl.classList.remove('asm-skeleton');
+                        targetEl.classList.add('asm-complete');
+
+                        if (targetId === 'target-hero-title') {
+                            document.getElementById('view-hero-outline').classList.remove('wireframe-mode');
+                        }
+                        if (targetId === 'target-portrait') {
+                            document.getElementById('portrait-crimson-layer').classList.add('revealed');
+                        }
+
+                        spawnSparkle(rect.left + rect.width, rect.top + rect.height, agent.color);
+                        playTick(880 + agent.id * 60, 0.045, 'triangle');
+
+                        box.style.opacity = '0';
+                        setTimeout(() => box.remove(), 260);
+                        if (onComplete) onComplete();
+                    }
+                }
+                requestAnimationFrame(stepBox);
+
+            }, delayMs);
+
+            activeTimeouts.push(t1);
+        }
+
+        // ---------------------------------------------------------------------
+        // 6. MASTER MULTI-AGENT ASSEMBLY SEQUENCE (00:00 -> 00:08)
+        // ---------------------------------------------------------------------
+        function clearAssemblyTimers() {
+            activeTimeouts.forEach(t => clearTimeout(t));
+            activeTimeouts = [];
+            if (animFrameId) cancelAnimationFrame(animFrameId);
+            document.getElementById('cad-boxes-layer').innerHTML = '';
+        }
+
+        function resetAllTargetsToHidden() {
+            document.querySelectorAll('.asm-target').forEach(el => {
+                el.classList.remove('asm-skeleton', 'asm-complete');
+            });
+            document.getElementById('view-hero-outline').classList.add('wireframe-mode');
+            document.getElementById('portrait-crimson-layer').classList.remove('revealed');
+            sec2Assembled = false;
+        }
+
+        function startSwarmAssembly() {
+            clearAssemblyTimers();
+            window.scrollTo({ top: 0, behavior: 'auto' });
+
+            isAssembling = true;
+            const spd = 1 / portfolioConfig.speedMultiplier;
+
+            resetAllTargetsToHidden();
+            createAgentCursors(portfolioConfig.cursorCount);
+
+            // Show Center Orbit Hub (Phase 0: 0.0s - 1.1s)
+            const hub = document.getElementById('swarm-center-hub');
+            const hubBadge = document.getElementById('hub-badge');
+            hub.style.opacity = '1';
+            hubBadge.style.transform = 'scale(1)';
+
+            const statusText = document.getElementById('pill-status-text');
+            const progressBar = document.getElementById('pill-progress-bar');
+            const skipBtn = document.getElementById('btn-skip-asm');
+            statusText.textContent = 'Assembling page...';
+            progressBar.style.width = '8%';
+            skipBtn.classList.remove('hidden');
+
+            // Start 60FPS Cursor Physics Loop
+            const loopStart = performance.now();
+            function updateCursorsLoop(now) {
+                const cx = window.innerWidth / 2;
+                const cy = window.innerHeight / 2;
+
+                agents.forEach((ag, idx) => {
+                    if (ag.mode === 'orbit') {
+                        ag.orbitAngle += 0.065 * portfolioConfig.speedMultiplier;
+                        const r = 56 + Math.sin(now * 0.005 + idx) * 6;
+                        ag.targetX = cx + Math.cos(ag.orbitAngle) * r;
+                        ag.targetY = cy + Math.sin(ag.orbitAngle) * r;
+                    }
+                    // Smooth spring interpolation
+                    ag.x += (ag.targetX - ag.x) * 0.22;
+                    ag.y += (ag.targetY - ag.y) * 0.22;
+                    ag.el.style.transform = `translate3d(${ag.x}px, ${ag.y}px, 0)`;
+                });
+
+                if (isAssembling) {
+                    animFrameId = requestAnimationFrame(updateCursorsLoop);
+                }
+            }
+            animFrameId = requestAnimationFrame(updateCursorsLoop);
+
+            // Phase 1: Sparkle Burst Outward (at 0.95s)
+            activeTimeouts.push(setTimeout(() => {
+                const cx = window.innerWidth / 2;
+                const cy = window.innerHeight / 2;
+                hubBadge.style.transform = 'scale(0.1)';
+                hub.style.opacity = '0';
+
+                // Spawn left & center constellation sparkles as seen at 00:01
+                for (let s = 0; s < 9; s++) {
+                    setTimeout(() => {
+                        spawnSparkle(
+                            80 + Math.random() * (window.innerWidth * 0.65),
+                            90 + Math.random() * (window.innerHeight * 0.65),
+                            '#ffffff'
+                        );
+                    }, s * 45);
+                }
+                progressBar.style.width = '24%';
+            }, 950 * spd));
+
+            // Phase 2: Schedule Hero Targets Assembly (1.05s -> 4.6s)
+            const heroBuildPlan = [
+                { id: 'target-nav',              agentIdx: 0, delay: 1000, dur: 650, prog: '35%' },
+                { id: 'target-hero-title',       agentIdx: 1, delay: 1200, dur: 950, prog: '48%' },
+                { id: 'target-name-card',        agentIdx: 2, delay: 1550, dur: 850, prog: '60%' },
+                { id: 'target-bio-box',          agentIdx: 3, delay: 2050, dur: 950, prog: '72%' },
+                { id: 'target-portrait',         agentIdx: 4, delay: 1850, dur: 1450, prog: '84%' },
+                { id: 'target-portrait-caption', agentIdx: 5, delay: 3250, dur: 500, prog: '88%' },
+                { id: 'target-stats-row',        agentIdx: 2, delay: 2950, dur: 700, prog: '90%' },
+                { id: 'target-log-1',            agentIdx: 6, delay: 2150, dur: 750, prog: '92%' },
+                { id: 'target-log-2',            agentIdx: 7, delay: 2650, dur: 750, prog: '96%' },
+                { id: 'target-log-3',            agentIdx: 0, delay: 3150, dur: 750, prog: '100%' }
+            ];
+
+            heroBuildPlan.forEach(step => {
+                const ag = agents[step.agentIdx % agents.length];
+                animateWireframeBoxOnTarget(
+                    step.id,
+                    ag,
+                    step.delay * spd,
+                    step.dur * spd,
+                    () => { progressBar.style.width = step.prog; }
+                );
+            });
+
+            // Phase 3: Auto-scroll to Philosophy Section & Assemble (as in 00:06 - 00:08)
+            activeTimeouts.push(setTimeout(() => {
+                if (portfolioConfig.autoScrollToSec2) {
+                    const sec2 = document.getElementById('philosophy-section');
+                    sec2.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    setTimeout(() => assembleSection2(), 550 * spd);
+                } else {
+                    finishSwarmAssembly();
+                }
+            }, 4300 * spd));
+        }
+
+        // Assemble Section 2 (Triggered automatically or on user scroll)
+        function assembleSection2() {
+            if (sec2Assembled) return;
+            sec2Assembled = true;
+            const spd = 1 / portfolioConfig.speedMultiplier;
+
+            const sec2Plan = [
+                { id: 'target-sec2-index', agentIdx: 1, delay: 50,  dur: 450 },
+                { id: 'target-sec2-title', agentIdx: 0, delay: 180, dur: 650 },
+                { id: 'target-phil-1',     agentIdx: 2, delay: 420, dur: 780 },
+                { id: 'target-phil-2',     agentIdx: 3, delay: 620, dur: 780 },
+                { id: 'target-phil-3',     agentIdx: 5, delay: 820, dur: 780 }
+            ];
+
+            sec2Plan.forEach(step => {
+                const ag = agents[step.agentIdx % agents.length];
+                if (ag) {
+                    animateWireframeBoxOnTarget(step.id, ag, step.delay * spd, step.dur * spd);
+                } else {
+                    document.getElementById(step.id)?.classList.add('asm-complete');
+                }
+            });
+
+            activeTimeouts.push(setTimeout(() => {
+                finishSwarmAssembly();
+            }, 1750 * spd));
+        }
+
+        function finishSwarmAssembly() {
+            const statusText = document.getElementById('pill-status-text');
+            const progressBar = document.getElementById('pill-progress-bar');
+            const skipBtn = document.getElementById('btn-skip-asm');
+
+            statusText.textContent = 'Assembly complete ✦';
+            progressBar.style.width = '100%';
+            skipBtn.classList.add('hidden');
+
+            // Gently fade out agent cursors after completion
+            agents.forEach(ag => {
+                ag.el.style.opacity = '0';
+            });
+            setTimeout(() => {
+                isAssembling = false;
+                if (animFrameId) cancelAnimationFrame(animFrameId);
+                document.getElementById('cursors-layer').innerHTML = '';
+            }, 450);
+        }
+
+        function skipAssembly() {
+            clearAssemblyTimers();
+            document.getElementById('swarm-center-hub').style.opacity = '0';
+            document.querySelectorAll('.asm-target').forEach(el => {
+                el.classList.remove('asm-skeleton');
+                el.classList.add('asm-complete');
+            });
+            document.getElementById('view-hero-outline').classList.remove('wireframe-mode');
+            document.getElementById('portrait-crimson-layer').classList.add('revealed');
+            sec2Assembled = true;
+            finishSwarmAssembly();
+        }
+
+        // Trigger Section 2 assembly if user scrolls manually
+        window.addEventListener('scroll', () => {
+            if (!sec2Assembled) {
+                const sec2 = document.getElementById('philosophy-section');
+                const rect = sec2.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.82) {
+                    assembleSection2();
+                }
+            }
+        });
+
+        // ---------------------------------------------------------------------
+        // 7. BUILDER STUDIO LIVE SYNC & CUSTOMIZATION
+        // ---------------------------------------------------------------------
+        function toggleBuilderDrawer(open) {
+            const drawer = document.getElementById('builder-drawer');
+            const backdrop = document.getElementById('builder-drawer-backdrop');
+            if (open) {
+                backdrop.classList.remove('hidden');
+                setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
+                drawer.classList.remove('translate-x-full');
+            } else {
+                backdrop.classList.add('opacity-0');
+                drawer.classList.add('translate-x-full');
+                setTimeout(() => backdrop.classList.add('hidden'), 300);
+            }
+        }
+
+        function setAccentColor(hex) {
+            portfolioConfig.accentColor = hex;
+            document.documentElement.style.setProperty('--accent', hex);
+            document.documentElement.style.setProperty('--accent-dim', hex + '2e');
+            document.documentElement.style.setProperty('--accent-glow', hex + '73');
+        }
+
+        function syncFormToState() {
+            portfolioConfig.cursorCount = parseInt(document.getElementById('inp-cursor-count').value, 10) || 8;
+            portfolioConfig.speedMultiplier = parseFloat(document.getElementById('inp-speed').value) || 1.0;
+            portfolioConfig.autoScrollToSec2 = document.getElementById('inp-autoscroll').checked;
+
+            portfolioConfig.heroOutline = document.getElementById('inp-hero-outline').value || 'PORTFOLIO';
+            portfolioConfig.greeting = document.getElementById('inp-greeting').value;
+            portfolioConfig.name = document.getElementById('inp-name').value;
+            portfolioConfig.role = document.getElementById('inp-role').value;
+            portfolioConfig.bio = document.getElementById('inp-bio').value;
+            portfolioConfig.btn1 = document.getElementById('inp-btn1').value;
+            portfolioConfig.btn2 = document.getElementById('inp-btn2').value;
+            portfolioConfig.portraitUrl = document.getElementById('inp-portrait-url').value.trim();
+            portfolioConfig.portraitCaption = document.getElementById('inp-portrait-caption').value;
+
+            portfolioConfig.stat1Val = document.getElementById('inp-stat1-val').value;
+            portfolioConfig.stat1Lbl = document.getElementById('inp-stat1-lbl').value;
+            portfolioConfig.stat2Val = document.getElementById('inp-stat2-val').value;
+            portfolioConfig.stat2Lbl = document.getElementById('inp-stat2-lbl').value;
+            portfolioConfig.stat3Val = document.getElementById('inp-stat3-val').value;
+            portfolioConfig.stat3Lbl = document.getElementById('inp-stat3-lbl').value;
+
+            portfolioConfig.log1Title = document.getElementById('inp-log1-title').value;
+            portfolioConfig.log1Desc = document.getElementById('inp-log1-desc').value;
+            portfolioConfig.log2Title = document.getElementById('inp-log2-title').value;
+            portfolioConfig.log2Desc = document.getElementById('inp-log2-desc').value;
+            portfolioConfig.log3Title = document.getElementById('inp-log3-title').value;
+            portfolioConfig.log3Desc = document.getElementById('inp-log3-desc').value;
+
+            portfolioConfig.sec2Heading = document.getElementById('inp-sec2-heading').value;
+            portfolioConfig.phil1Title = document.getElementById('inp-phil1-title').value;
+            portfolioConfig.phil2Title = document.getElementById('inp-phil2-title').value;
+            portfolioConfig.phil3Title = document.getElementById('inp-phil3-title').value;
+
+            renderConfigToDOM();
+        }
+
+        function renderConfigToDOM() {
+            document.getElementById('view-hero-outline').textContent = portfolioConfig.heroOutline;
+            document.getElementById('view-greeting').textContent = portfolioConfig.greeting;
+            document.getElementById('view-name').textContent = portfolioConfig.name;
+            document.getElementById('view-logo-box').textContent = (portfolioConfig.name.trim()[0] || 'S').toUpperCase();
+            document.getElementById('view-role').textContent = portfolioConfig.role;
+            document.getElementById('view-bio').textContent = portfolioConfig.bio;
+            document.getElementById('view-btn-primary').innerHTML = `<span>${portfolioConfig.btn1}</span><span>→</span>`;
+            document.getElementById('view-btn-secondary').textContent = portfolioConfig.btn2;
+            document.getElementById('view-portrait-caption').textContent = portfolioConfig.portraitCaption;
+
+            // Portrait image vs SVG silhouette
+            const customImg = document.getElementById('view-custom-portrait');
+            const svgPortrait = document.getElementById('view-svg-portrait');
+            if (portfolioConfig.portraitUrl) {
+                customImg.src = portfolioConfig.portraitUrl;
+                customImg.classList.remove('hidden');
+                svgPortrait.classList.add('hidden');
+            } else {
+                customImg.classList.add('hidden');
+                svgPortrait.classList.remove('hidden');
+            }
+
+            document.getElementById('view-stat1-val').textContent = portfolioConfig.stat1Val;
+            document.getElementById('view-stat1-lbl').textContent = portfolioConfig.stat1Lbl;
+            document.getElementById('view-stat2-val').textContent = portfolioConfig.stat2Val;
+            document.getElementById('view-stat2-lbl').textContent = portfolioConfig.stat2Lbl;
+            document.getElementById('view-stat3-val').textContent = portfolioConfig.stat3Val;
+            document.getElementById('view-stat3-lbl').textContent = portfolioConfig.stat3Lbl;
+
+            document.getElementById('view-log1-title').textContent = portfolioConfig.log1Title;
+            document.getElementById('view-log1-desc').textContent = portfolioConfig.log1Desc;
+            document.getElementById('view-log2-title').textContent = portfolioConfig.log2Title;
+            document.getElementById('view-log2-desc').textContent = portfolioConfig.log2Desc;
+            document.getElementById('view-log3-title').textContent = portfolioConfig.log3Title;
+            document.getElementById('view-log3-desc').textContent = portfolioConfig.log3Desc;
+
+            document.getElementById('view-sec2-heading').textContent = portfolioConfig.sec2Heading;
+            document.getElementById('view-phil1-title').textContent = portfolioConfig.phil1Title;
+            document.getElementById('view-phil2-title').textContent = portfolioConfig.phil2Title;
+            document.getElementById('view-phil3-title').textContent = portfolioConfig.phil3Title;
+        }
+
+        function applyConfigAndReplay() {
+            syncFormToState();
+            toggleBuilderDrawer(false);
+            setTimeout(() => startSwarmAssembly(), 260);
+        }
+
+        // ---------------------------------------------------------------------
+        // 8. STANDALONE SINGLE-FILE HTML GENERATOR ENGINE
+        // ---------------------------------------------------------------------
+        function generateStandaloneHTML() {
+            syncFormToState();
+            const cloneDoc = document.documentElement.cloneNode(true);
+
+            // Remove Builder Studio Drawer, Export Modal, and Top Builder Trigger from exported standalone file
+            const toRemove = [
+                '#builder-drawer',
+                '#builder-drawer-backdrop',
+                '#export-modal',
+                '#btn-open-builder'
+            ];
+            toRemove.forEach(sel => {
+                const el = cloneDoc.querySelector(sel);
+                if (el) el.remove();
+            });
+
+            // Also remove top builder toolbar container
+            const topBar = cloneDoc.querySelector('.fixed.top-3.right-4');
+            if (topBar) topBar.remove();
+
+            // Reset targets in clone so exported file starts clean and self-assembles on load
+            cloneDoc.querySelectorAll('.asm-target').forEach(el => {
+                el.classList.remove('asm-complete', 'asm-skeleton');
+            });
+            cloneDoc.querySelector('#cad-boxes-layer').innerHTML = '';
+            cloneDoc.querySelector('#cursors-layer').innerHTML = '';
+
+            // Bake current user configuration into the exported script
+            let htmlString = '<!DOCTYPE html>\n' + cloneDoc.outerHTML;
+            const serializedConfig = JSON.stringify(portfolioConfig, null, 4);
+            htmlString = htmlString.replace(
+                /const portfolioConfig = \{[\s\S]*?\};/,
+                `const portfolioConfig = ${serializedConfig};`
+            );
+
+            return htmlString;
+        }
+
+        function openExportModal() {
+            const code = generateStandaloneHTML();
+            document.getElementById('exported-html-code').value = code;
+            const modal = document.getElementById('export-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeExportModal() {
+            const modal = document.getElementById('export-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function copyExportedHTML() {
+            const textarea = document.getElementById('exported-html-code');
+            textarea.select();
+            document.execCommand('copy');
+            const fb = document.getElementById('copy-feedback');
+            fb.style.opacity = '1';
+            setTimeout(() => fb.style.opacity = '0', 2500);
+        }
+
+        function downloadExportedHTML() {
+            const code = document.getElementById('exported-html-code').value || generateStandaloneHTML();
+            const blob = new Blob([code], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            const slug = (portfolioConfig.name || 'portfolio').toLowerCase().replace(/[^a-z0-9]/g, '') || 'portfolio';
+            a.href = url;
+            a.download = `${slug}-autonomous-portfolio.html`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+        }
+
+        // ---------------------------------------------------------------------
+        // 9. INITIALIZE ON WINDOW LOAD
+        // ---------------------------------------------------------------------
+        window.onload = function () {
+            setAccentColor(portfolioConfig.accentColor);
+            renderConfigToDOM();
+            // Start the exact multi-agent cursor assembly animation automatically
+            setTimeout(() => {
+                startSwarmAssembly();
+            }, 180);
+        };
+    </script>
+
+</body></html>

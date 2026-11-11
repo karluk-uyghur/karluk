@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+:root {
+  --accent: #0099ff;
+  --accent-dim: rgba(0, 153, 255, 0.18);
+  --accent-glow: rgba(0, 153, 255, 0.45);
+  --bg-primary: #050507;
+  --bg-card: #0b0b10;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #f4f4f6;
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Subtle technical background grid */
+.tech-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Overdrive High-Octane Background Grid */
+body.overdrive-active .tech-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(0, 229, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 229, 255, 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Giant Hollow Outlined Hero Text */
+.hero-outline-text {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--accent);
+  letter-spacing: 0.04em;
+  line-height: 0.95;
+  user-select: none;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: drop-shadow(0 0 28px var(--accent-glow));
+}
+
+.hero-outline-text.wireframe-mode {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.18);
+  filter: none;
+}
+
+/* Overdrive Chromatic Aberration & Glitch */
+@keyframes cyberGlitch {
+  0% {
+    text-shadow: 2px 0 #00ffff, -2px 0 #ff0055;
+    transform: translate(0);
+  }
+  20% {
+    text-shadow: -2px 0 #00ffff, 2px 0 #ff0055;
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    text-shadow: 2px -1px #00ffff, -1px 2px #ff0055;
+    transform: translate(1px, -1px);
+  }
+  60% {
+    text-shadow: -1px 1px #00ffff, 1px -1px #ff0055;
+    transform: translate(0);
+  }
+  80% {
+    text-shadow: 1px 0 #00ffff, -1px 0 #ff0055;
+    transform: translate(1px, 1px);
+  }
+  100% {
+    text-shadow: 2px 0 #00ffff, -2px 0 #ff0055;
+    transform: translate(0);
+  }
+}
+
+.cyber-glitch-text {
+  animation: cyberGlitch 2.5s infinite steps(2, start);
+}
+
+/* Assembly Target States */
+.asm-target {
+  position: relative;
+  opacity: 0.28;
+  filter: grayscale(1) contrast(0.7);
+  transform: translateY(3px) scale(0.99);
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.45s ease;
+  will-change: opacity, transform;
+}
+
+.asm-target.asm-skeleton {
+  opacity: 0.28;
+  filter: grayscale(1) contrast(0.7);
+  transform: translateY(2px) scale(0.995);
+}
+
+.asm-target.asm-complete {
+  opacity: 1;
+  filter: none;
+  transform: translateY(0) scale(1);
+}
+
+/* Portrait Backdrop Reveal */
+.portrait-accent-bg {
+  background-color: var(--accent);
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: clip-path 0.75s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.3s ease;
+}
+
+.portrait-accent-bg.revealed {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Dynamic CAD Wireframe Box drawn by cursors */
+.cad-wireframe-box {
+  position: absolute;
+  pointer-events: none;
+  z-index: 60;
+  border: 1.5px solid var(--box-color, #3b82f6);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(0, 0, 0, 0) 100%);
+  box-shadow: 0 0 20px var(--box-glow, rgba(59, 130, 246, 0.25));
+  transition: opacity 0.25s ease;
+}
+
+.cad-corner {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
+  border: 1.5px solid var(--box-color, #3b82f6);
+}
+.cad-corner.tl { top: -4px; left: -4px; }
+.cad-corner.tr { top: -4px; right: -4px; }
+.cad-corner.bl { bottom: -4px; left: -4px; }
+.cad-corner.br { bottom: -4px; right: -4px; }
+
+/* Sparkle burst animation */
+@keyframes sparklePop {
+  0% { transform: translate(-50%, -50%) scale(0) rotate(0deg); opacity: 1; }
+  60% { transform: translate(-50%, -50%) scale(1.25) rotate(45deg); opacity: 0.95; }
+  100% { transform: translate(-50%, -50%) scale(0.2) rotate(90deg); opacity: 0; }
+}
+.sparkle-star {
+  position: fixed;
+  pointer-events: none;
+  z-index: 75;
+  animation: sparklePop 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scanlines overlay */
+.scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.18) 3px,
+    rgba(0, 0, 0, 0.18) 4px
+  );
+}
+
+/* East Turkistan Flag wave effect */
+@keyframes flagWave {
+  0%, 100% { transform: rotate(0deg) skewY(0deg); }
+  50% { transform: rotate(1.2deg) skewY(-1deg); }
+}
+.turkistan-flag-wave {
+  animation: flagWave 4s ease-in-out infinite;
+}
+
+/* Wild Cyber Glow for Turkistan Flag */
+.flag-cyber-aura {
+  box-shadow: 0 0 22px rgba(0, 153, 255, 0.75), inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.accent-bg { background-color: var(--accent); }
+.accent-text { color: var(--accent); }
+.accent-border { border-color: var(--accent); }
+.accent-glow-btn {
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 18px var(--accent-dim), inset 0 0 12px var(--accent-dim);
+}
+.accent-glow-btn:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 0 28px var(--accent-glow);
+}
+
+/* Wild Cyber Overdrive Energy Pulse */
+@keyframes cyberPulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(0, 229, 255, 0.4), inset 0 0 15px rgba(0, 229, 255, 0.2); }
+  50% { box-shadow: 0 0 35px rgba(0, 229, 255, 0.8), inset 0 0 25px rgba(0, 229, 255, 0.4); }
+}
+.overdrive-pulse {
+  animation: cyberPulse 2s ease-in-out infinite;
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+.animate-slideLeft {
+  animation: slideLeft 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}

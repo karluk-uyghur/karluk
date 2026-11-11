@@ -1,0 +1,6 @@
+{
+  "name": "Qarluq Uyghur Portfolio",
+  "description": "Multi-agent autonomous portfolio for Qarluq Uyghur with Turkistan flag and exportable HTML generator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
