@@ -347,12 +347,26 @@
                         </p>
 
                         <div class="flex flex-wrap items-center gap-3 pt-1">
-                            <a href="#philosophy-section" id="view-btn-primary" class="accent-glow-btn px-4 py-2.5 rounded text-xs font-mono uppercase tracking-wider text-white transition-all flex items-center gap-2">
+                            <button onclick="revealRegisterPrompt()" id="view-btn-primary" class="accent-glow-btn px-4 py-2.5 rounded text-xs font-mono uppercase tracking-wider text-white transition-all flex items-center gap-2 cursor-pointer active:scale-95" title="تىزىملىتىش ۋە سىستېمىغا ئاتلىنىش">
                                 <span>دەرھال ئاتلىنىش</span>
                                 <span>→</span>
-                            </a>
-                            <button onclick="window.scrollTo({top: 600, behavior: 'smooth'})" id="view-btn-secondary" class="px-4 py-2.5 rounded border border-zinc-800 hover:border-zinc-600 bg-zinc-950/80 text-xs font-mono uppercase tracking-wider text-zinc-300 hover:text-white transition-all">
+                            </button>
+                            <button onclick="document.getElementById('system-video-section')?.scrollIntoView({behavior: 'smooth'})" id="view-btn-secondary" class="px-4 py-2.5 rounded border border-zinc-800 hover:border-zinc-600 bg-zinc-950/80 text-xs font-mono uppercase tracking-wider text-zinc-300 hover:text-white transition-all cursor-pointer">
                                 كۆرۈپ بېقىڭ
+                            </button>
+                        </div>
+
+                        <!-- Registration Prompt under دەرھال ئاتلىنىش -->
+                        <div id="register-prompt-box" class="hidden mt-3 p-3.5 rounded-xl bg-emerald-950/80 border-2 border-emerald-400/90 shadow-[0_0_30px_rgba(0,255,157,0.35)] flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <div class="flex items-center gap-2.5">
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                                <span class="font-mono text-xs sm:text-sm text-emerald-200 font-bold">
+                                    سىستېمىغا كىرىش ئۈچۈن تىزىملىتىڭ:
+                                </span>
+                            </div>
+                            <button onclick="openHackerModal()" class="w-full sm:w-auto px-5 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-zinc-950 font-mono text-xs font-black tracking-wider shadow-lg hover:shadow-emerald-500/50 transition-all cursor-pointer whitespace-nowrap flex items-center justify-center gap-2">
+                                <span>⚡ تىزىملىتىپ كىرىڭ</span>
+                                <span>→</span>
                             </button>
                         </div>
                     </div>
@@ -533,6 +547,66 @@
             </div>
         </section>
 
+        <!-- SECTION 3: SYSTEM VIDEO DEMO (FABLE 5.2 3D CINEMA) -->
+        <section id="system-video-section" class="mt-24 pt-12 border-t border-zinc-900/90 relative">
+            <div class="flex items-center justify-between font-mono text-xs text-zinc-500 mb-6">
+                <div class="flex items-center gap-2">
+                    <span class="accent-text font-bold">// 02.00 SYSTEM_DEMO</span>
+                    <span class="text-zinc-700">|</span>
+                    <span>AUTONOMOUS 3D CINEMA • FABLE 5.2</span>
+                </div>
+                <div class="hidden sm:flex items-center gap-3">
+                    <span class="text-emerald-400 flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        4K UHD READY
+                    </span>
+                    <span class="text-zinc-600">// GPU: ACTIVE</span>
+                </div>
+            </div>
+
+            <div class="mb-8 max-w-3xl">
+                <div class="font-mono text-xs uppercase tracking-widest accent-text font-semibold mb-2 flex items-center gap-2">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    <span>سۈنئىي ئەقىل ھەرىكەتلىك فىلىم تەجرىبىخانىسى</span>
+                </div>
+                <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+                    سۈنئىي ئەقىل ئارقىلىق 3D ئۆزلۈكىدىن قۇرۇلغان ئانىماتسىيە فىلىمى
+                </h2>
+                <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mt-3">
+                    Fable 5.2 مودېلى پەقەت بىرلا جۈملە تەلەپ ئارقىلىق پۈتۈنلەي Blender 3D مۇھىتىدا 13 خىل كامېرا بۇلۇڭىدا، 4K ئېنىقلىق بىلەن ھاسىل قىلغان مەخسۇس ئانىماتسىيە كۆرۈنۈشى.
+                </p>
+            </div>
+
+            <div class="relative rounded-2xl overflow-hidden bg-black border border-zinc-800 shadow-2xl">
+                <div class="relative aspect-video max-h-[600px] w-full flex items-center justify-center bg-zinc-950">
+                    <video id="fable-video-player" src="/assets/aistudio/AQMb7jeHqtBAgLHeLIw53fbYt9RIhAFICW4U6HjS9YxBOl6iLUNbk_Nl7X_Wclk2rTLqNJspp_ae78db44.mp4" class="w-full h-full object-contain" controls playsinline preload="metadata"></video>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                <div class="p-4 rounded-xl bg-zinc-950/80 border border-zinc-800/80">
+                    <div class="font-mono text-xs accent-text font-bold">01 // MODEL</div>
+                    <div class="font-display font-bold text-lg text-white mt-1">Fable 5.2</div>
+                    <p class="text-xs text-zinc-400 mt-1">بىرلا تەلەپتىن ھاسىل بولغان پۈتۈن كۆرۈنۈش</p>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-950/80 border border-zinc-800/80">
+                    <div class="font-mono text-xs accent-text font-bold">02 // CAMERAS</div>
+                    <div class="font-display font-bold text-lg text-white mt-1">13 لىنزىلىق نۇقتا</div>
+                    <p class="text-xs text-zinc-400 mt-1">ماكاندىكى ماس قەدەملىك كامېرا يۆنىلىشى</p>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-950/80 border border-zinc-800/80">
+                    <div class="font-mono text-xs accent-text font-bold">03 // QUALITY</div>
+                    <div class="font-display font-bold text-lg text-white mt-1">4K UHD رەندىر</div>
+                    <p class="text-xs text-zinc-400 mt-1">يۇقىرى ئېنىقلىقتىكى نۇر قايتىش تەقلىدى</p>
+                </div>
+                <div class="p-4 rounded-xl bg-zinc-950/80 border border-zinc-800/80">
+                    <div class="font-mono text-xs accent-text font-bold">04 // EFFICIENCY</div>
+                    <div class="font-display font-bold text-lg text-white mt-1">$5.75 سەرپىيات</div>
+                    <p class="text-xs text-zinc-400 mt-1">GPU ھېسابلاش تەننەرخىنىڭ تېجەشلىكلىكى</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- BOTTOM FLOATING TELEMETRY PILL BAR -->
@@ -560,6 +634,86 @@
         <button onclick="startSwarmAssembly()" title="قايتا قۇرۇش / Replay Assembly" class="p-1.5 rounded-full hover:bg-zinc-800 text-zinc-300 hover:text-white transition-colors">
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
         </button>
+    </div>
+
+    <!-- HACKER MATRIX TERMINAL MODAL -->
+    <div id="hacker-terminal-modal" class="fixed inset-0 z-[120] hidden items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-lg">
+        <div class="relative w-full max-w-2xl rounded-2xl overflow-hidden border border-emerald-500/40 bg-zinc-950 shadow-[0_0_60px_rgba(0,255,157,0.2)] flex flex-col max-h-[92vh]">
+            <div class="flex items-center justify-between px-4 py-3 bg-zinc-900/90 border-b border-emerald-500/30">
+                <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500/90"></span>
+                    <span class="w-3 h-3 rounded-full bg-amber-500/90"></span>
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/90"></span>
+                    <span class="font-mono text-xs text-emerald-300 font-semibold tracking-wider ml-2 pl-2 border-l border-zinc-800">
+                        QARLUQ_CYBER_TERMINAL // v5.2
+                    </span>
+                </div>
+                <button onclick="closeHackerModal()" class="p-1 rounded text-zinc-400 hover:text-white hover:bg-zinc-800 cursor-pointer">✕</button>
+            </div>
+
+            <div class="relative flex-1 p-5 sm:p-7 overflow-y-auto min-h-[380px]">
+                <canvas id="matrix-rain-canvas" class="absolute inset-0 pointer-events-none opacity-30"></canvas>
+                <div class="relative z-10 space-y-5">
+                    <div class="font-mono text-xs text-emerald-400/90 space-y-1 bg-black/60 p-3.5 rounded-lg border border-emerald-950">
+                        <div class="text-sky-400 font-bold">[⚡] QARLUQ AUTONOMOUS CLUSTER CONNECTED</div>
+                        <div class="text-zinc-400">&gt; SYSTEM PROTOCOL: SECURE_MATRIX_UPLINK (ACTIVE)</div>
+                        <div class="text-zinc-400">&gt; AUTH STATUS: REQUIRING USER IDENTITY</div>
+                    </div>
+
+                    <!-- Input step -->
+                    <div id="hacker-step-input" class="space-y-4 pt-2">
+                        <div class="space-y-2">
+                            <label class="block font-mono text-sm sm:text-base text-emerald-300 font-bold">
+                                &gt;&gt; ئىسمىڭىزنى كىرگۈزۈڭ:
+                            </label>
+                            <input id="hacker-user-name" type="text" placeholder="مەسىلەن: قارلۇق، ئەلى، زەپەر..." class="w-full px-4 py-3 rounded-lg bg-black/80 border-2 border-emerald-500/60 text-white font-mono text-base outline-none focus:border-cyan-400" onkeydown="if(event.key==='Enter')submitHackerName()"/>
+                        </div>
+                        <div id="hacker-error-msg" class="hidden font-mono text-xs text-red-400">ئىسمىڭىزنى كىرگۈزۈڭ!</div>
+                        <div class="flex items-center justify-between pt-2">
+                            <span class="text-[11px] font-mono text-zinc-500">بېسىڭ: Enter ياكى مۇقىملاش</span>
+                            <button onclick="submitHackerName()" class="px-6 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs sm:text-sm font-bold tracking-wider cursor-pointer">
+                                مۇقىملاش ↵
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Punchline step -->
+                    <div id="hacker-step-punchline" class="hidden space-y-5">
+                        <div class="p-3.5 rounded-lg bg-red-950/60 border border-red-500/50 flex items-center justify-between font-mono text-xs text-red-400">
+                            <span>[STATUS: 402 PAYMENT REQUIRED // سىستېما تەلىپى]</span>
+                            <span id="hacker-verified-name" class="text-zinc-300"></span>
+                        </div>
+
+                        <div class="p-6 rounded-xl bg-black/85 border-2 border-amber-400/80 shadow-[0_0_35px_rgba(251,191,36,0.25)]">
+                            <div class="font-mono text-xs text-amber-400 font-semibold mb-2">
+                                // مەشھۇر ھەقىقەت • كودېرلارنىڭ ساداسى:
+                            </div>
+                            <blockquote class="font-display font-extrabold text-xl sm:text-2xl text-amber-200 leading-relaxed">
+                                «ھەق تاپشۇرۇڭ، بىكارغا مۈشۈكمۇ ئاپتاپقا چىقماس! خۇددى بىز كود يېزىشنى بىكارغا ئۆگەنمىگەندەك.»
+                            </blockquote>
+                            <p class="text-zinc-400 text-xs sm:text-sm font-mono pt-2 mt-2 border-t border-zinc-800">
+                                ئەقىل ئەمگىكى ۋە كېچىلىك تىرىشچانلىقلار ھەقسىز بولمايدۇ! 💻☕
+                            </p>
+                        </div>
+
+                        <div id="coffee-pay-box" class="p-4 rounded-lg bg-zinc-900 border border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <span class="font-mono text-xs text-zinc-300">مەۋھۇم قەھۋە سۇنۇش ئارقىلىق ئەمگەكنى قەدىرلەڭ:</span>
+                            <button onclick="payCoffeeMock()" class="px-5 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-mono text-xs font-bold cursor-pointer whitespace-nowrap">
+                                قەھۋە سۇنۇش (ھەق تاپشۇرۇش) ☕
+                            </button>
+                        </div>
+                        <div id="coffee-success-box" class="hidden p-4 rounded-lg bg-emerald-950 border border-emerald-500 text-emerald-300 font-mono text-xs">
+                            مۇبارەك بولسۇن! قەھۋە تاپشۇرۇۋېلىندى! سىز ھەقىقىي مەرھەمەتلىك دوستىمىز ئىكەنسىز! 🎉
+                        </div>
+
+                        <div class="flex justify-between pt-2">
+                            <button onclick="resetHackerModal()" class="px-3.5 py-1.5 rounded bg-zinc-900 text-zinc-400 hover:text-white font-mono text-xs cursor-pointer">قايتا كىرگۈزۈش</button>
+                            <button onclick="closeHackerModal()" class="px-4 py-1.5 rounded bg-zinc-800 text-zinc-200 font-mono text-xs cursor-pointer">چىقىش</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- SCRIPTS: SWARM ENGINE, MATRIX TEXT DECRYPTER & CYBER LASER CANVAS -->
@@ -670,6 +824,107 @@
                     el.textContent = original;
                 }
             }, 38);
+        }
+
+        function revealRegisterPrompt() {
+            const box = document.getElementById('register-prompt-box');
+            if (box) {
+                box.classList.remove('hidden');
+                box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                playSciFiSound('overdrive');
+            }
+        }
+
+        let matrixAnimId = null;
+        function openHackerModal() {
+            const modal = document.getElementById('hacker-terminal-modal');
+            if (!modal) return;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            playSciFiSound('overdrive');
+            startMatrixRain();
+            setTimeout(() => {
+                const input = document.getElementById('hacker-user-name');
+                if (input) input.focus();
+            }, 100);
+        }
+
+        function closeHackerModal() {
+            const modal = document.getElementById('hacker-terminal-modal');
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            if (matrixAnimId) cancelAnimationFrame(matrixAnimId);
+        }
+
+        function submitHackerName() {
+            const input = document.getElementById('hacker-user-name');
+            const err = document.getElementById('hacker-error-msg');
+            const name = (input ? input.value : '').trim();
+            if (!name) {
+                if (err) err.classList.remove('hidden');
+                return;
+            }
+            if (err) err.classList.add('hidden');
+
+            const nameEl = document.getElementById('hacker-verified-name');
+            if (nameEl) nameEl.textContent = 'USER: ' + name;
+
+            document.getElementById('hacker-step-input')?.classList.add('hidden');
+            document.getElementById('hacker-step-punchline')?.classList.remove('hidden');
+            playSciFiSound('overdrive');
+        }
+
+        function payCoffeeMock() {
+            document.getElementById('coffee-pay-box')?.classList.add('hidden');
+            document.getElementById('coffee-success-box')?.classList.remove('hidden');
+            playSciFiSound('overdrive');
+        }
+
+        function resetHackerModal() {
+            document.getElementById('hacker-step-input')?.classList.remove('hidden');
+            document.getElementById('hacker-step-punchline')?.classList.add('hidden');
+            document.getElementById('coffee-pay-box')?.classList.remove('hidden');
+            document.getElementById('coffee-success-box')?.classList.add('hidden');
+            const input = document.getElementById('hacker-user-name');
+            if (input) {
+                input.value = '';
+                input.focus();
+            }
+        }
+
+        function startMatrixRain() {
+            const canvas = document.getElementById('matrix-rain-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            const parent = canvas.parentElement;
+            let w = canvas.width = parent ? parent.clientWidth : 600;
+            let h = canvas.height = parent ? parent.clientHeight : 400;
+
+            const chars = '0123456789ABCDEF01010101XYZ#<>{}[]=+$*@!~%&';
+            const fontSize = 14;
+            const cols = Math.floor(w / fontSize);
+            const drops = Array.from({ length: cols }, () => Math.floor(Math.random() * -30));
+
+            let last = 0;
+            function drawMatrix(time) {
+                matrixAnimId = requestAnimationFrame(drawMatrix);
+                if (time - last < 33) return;
+                last = time;
+                ctx.fillStyle = 'rgba(5, 8, 15, 0.18)';
+                ctx.fillRect(0, 0, w, h);
+                ctx.font = fontSize + 'px monospace';
+                for (let i = 0; i < drops.length; i++) {
+                    const char = chars[Math.floor(Math.random() * chars.length)];
+                    const x = i * fontSize;
+                    const y = drops[i] * fontSize;
+                    ctx.fillStyle = drops[i] % 4 === 0 ? '#38bdf8' : '#00ff9d';
+                    ctx.fillText(char, x, y);
+                    if (y > h && Math.random() > 0.975) drops[i] = 0;
+                    drops[i]++;
+                }
+            }
+            matrixAnimId = requestAnimationFrame(drawMatrix);
         }
 
         // Interactive Cyber Laser Canvas

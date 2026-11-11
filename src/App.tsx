@@ -17,6 +17,8 @@ import { TurkistanFlag } from './components/TurkistanFlag';
 import { CodeModal } from './components/CodeModal';
 import { BuilderDrawer } from './components/BuilderDrawer';
 import { CyberCanvas } from './components/CyberCanvas';
+import HackerModal from './components/HackerModal';
+import CyberVideoSection from './components/CyberVideoSection';
 import { generateAutonomousPortfolioHtml } from './utils/generateHtml';
 import { getScrambledText, playCyberSound } from './utils/cyberEffects';
 
@@ -37,6 +39,8 @@ export default function App() {
   const [isCodeModalOpen, setIsCodeModalOpen] = useState(false);
   const [isBuilderOpen, setIsBuilderOpen] = useState(false);
   const [isFlagModalOpen, setIsFlagModalOpen] = useState(false);
+  const [isHackerModalOpen, setIsHackerModalOpen] = useState(false);
+  const [showRegisterPrompt, setShowRegisterPrompt] = useState(false);
   const [isAssembling, setIsAssembling] = useState(false);
   const [assemblyProgress, setAssemblyProgress] = useState(100);
   const [assemblyStatus, setAssemblyStatus] = useState('Assembly complete ✦');
@@ -720,13 +724,17 @@ export default function App() {
                 </p>
 
                 <div className="flex flex-wrap items-center gap-3 pt-1">
-                  <a
-                    href="#philosophy-section"
-                    className="accent-glow-btn px-4 py-2.5 rounded text-xs font-mono uppercase tracking-wider text-white transition-all flex items-center gap-2"
+                  <button
+                    onClick={() => {
+                      setShowRegisterPrompt(true);
+                      if (soundEnabled) playTick(660, 0.12, 'sine');
+                    }}
+                    className="accent-glow-btn px-4 py-2.5 rounded text-xs font-mono uppercase tracking-wider text-white transition-all flex items-center gap-2 cursor-pointer shadow-lg active:scale-95"
+                    title="تىزىملىتىش ۋە سىستېمىغا ئاتلىنىش"
                   >
                     <span>{config.btn1}</span>
                     <span>→</span>
-                  </a>
+                  </button>
                   <button
                     onClick={() => setIsCodeModalOpen(true)}
                     className="px-4 py-2.5 rounded border border-zinc-800 hover:border-zinc-600 bg-zinc-950/80 text-xs font-mono uppercase tracking-wider text-zinc-300 hover:text-white transition-all cursor-pointer"
@@ -734,6 +742,28 @@ export default function App() {
                     {config.btn2}
                   </button>
                 </div>
+
+                {/* Pulsating Prompt that appears right under دەرھال ئاتلىنىش */}
+                {showRegisterPrompt && (
+                  <div className="p-3.5 rounded-xl bg-emerald-950/80 border-2 border-emerald-400/90 shadow-[0_0_30px_rgba(0,255,157,0.35)] flex flex-col sm:flex-row items-center justify-between gap-3 animate-fadeIn">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
+                      <span className="font-mono text-xs sm:text-sm text-emerald-200 font-bold">
+                        سىستېمىغا كىرىش ئۈچۈن تىزىملىتىڭ:
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => {
+                        setIsHackerModalOpen(true);
+                        if (soundEnabled) playTick(750, 0.15, 'triangle');
+                      }}
+                      className="w-full sm:w-auto px-5 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 active:scale-95 text-zinc-950 font-mono text-xs font-black tracking-wider shadow-lg hover:shadow-emerald-500/50 transition-all cursor-pointer whitespace-nowrap flex items-center justify-center gap-2"
+                    >
+                      <span>⚡ تىزىملىتىپ كىرىڭ</span>
+                      <span>→</span>
+                    </button>
+                  </div>
+                )}
               </div>
 
               {/* Bottom 3 Metrics Row */}
@@ -996,6 +1026,12 @@ export default function App() {
           </div>
         </section>
 
+        {/* SECTION 3: AUTONOMOUS 3D AI VIDEO CINEMA */}
+        <CyberVideoSection
+          isOverdrive={config.isOverdrive}
+          accentColor={config.accentColor}
+        />
+
       </main>
 
       {/* ===================================================================== */}
@@ -1123,6 +1159,13 @@ export default function App() {
           </div>
         </div>
       )}
+
+      {/* Hacker Matrix Terminal Modal */}
+      <HackerModal
+        isOpen={isHackerModalOpen}
+        onClose={() => setIsHackerModalOpen(false)}
+        soundEnabled={soundEnabled}
+      />
 
     </div>
   );
